@@ -16,7 +16,7 @@ namespace WGU_C968_1_v001
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Inventory());
+            Application.Run(new Form1());
 
 }
         

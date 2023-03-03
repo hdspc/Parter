@@ -1,41 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WGU_C968_1_v001
 {
-    public partial class Inventory : Form
+    public partial class Form1 : Form
     {
-        public Inventory()
+        public Form1()
         {
             InitializeComponent();
+            dgv_PartsGrid.DataSource = Part.Parts;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+
+
+   
+        private void btn_AddPart_Click(object sender, EventArgs e)
         {
-
+            System.Diagnostics.Debug.WriteLine("This is a adtaagataagagaglog");
+            
+            Form parts = new AddPart(); //this is the change, code for redirect  
+            parts.ShowDialog();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+     
 
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+      
     }
 }
