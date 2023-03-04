@@ -10,27 +10,28 @@ using System.Windows.Forms;
 
 namespace WGU_C968_1_v001
 {
-    public partial class AddPart : Form
+    public partial class CancelConfirm : Form
     {
-        public AddPart()
+        public CancelConfirm()
         {
             InitializeComponent();
         }
 
+    
 
-
-        private void btn_AddPart_Cancel_Click(object sender, EventArgs e)
+        private void btn_CancelConfirm_Exit_Click(object sender, EventArgs e)
         {
-            // MessageBox.Show("Cancel text");
-
-
-            // this.Close();
-
-            Form closure = new CancelConfirm();
-            closure.Owner = this;
-            closure.ShowDialog();
+            this.Close();
+            if (Owner != null)
+                Owner.Close();
         }
 
+        private void btn_CancelConfirm_Cancel_Click(object sender, EventArgs e)
+        {
+            Form closure = new CancelConfirm();
+            closure.Owner = this;
+            this.Close();
 
+        }
     }
 }

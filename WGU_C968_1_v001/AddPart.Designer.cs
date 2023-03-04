@@ -60,7 +60,6 @@
             this.rdo_AddPart_InHouse.TabStop = true;
             this.rdo_AddPart_InHouse.Text = "In House";
             this.rdo_AddPart_InHouse.UseVisualStyleBackColor = true;
-            this.rdo_AddPart_InHouse.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // rdo_AddPart_Outsourced
             // 
@@ -75,6 +74,7 @@
             // 
             // txt_AddPart_ID
             // 
+            this.txt_AddPart_ID.Enabled = false;
             this.txt_AddPart_ID.Location = new System.Drawing.Point(303, 206);
             this.txt_AddPart_ID.Name = "txt_AddPart_ID";
             this.txt_AddPart_ID.Size = new System.Drawing.Size(188, 31);
@@ -88,7 +88,6 @@
             this.lbl_AddPart_ID.Size = new System.Drawing.Size(32, 25);
             this.lbl_AddPart_ID.TabIndex = 3;
             this.lbl_AddPart_ID.Text = "ID";
-            this.lbl_AddPart_ID.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbl_AddPart_Name
             // 
@@ -107,7 +106,6 @@
             this.lbl_AddPart_Inventory.Size = new System.Drawing.Size(100, 25);
             this.lbl_AddPart_Inventory.TabIndex = 5;
             this.lbl_AddPart_Inventory.Text = "Inventory";
-            this.lbl_AddPart_Inventory.Click += new System.EventHandler(this.label3_Click);
             // 
             // lbl_AddPart_Price
             // 
@@ -214,6 +212,7 @@
             this.btn_AddPart_Cancel.TabIndex = 18;
             this.btn_AddPart_Cancel.Text = "Cancel";
             this.btn_AddPart_Cancel.UseVisualStyleBackColor = true;
+            this.btn_AddPart_Cancel.Click += new System.EventHandler(this.btn_AddPart_Cancel_Click);
             // 
             // AddPart
             // 

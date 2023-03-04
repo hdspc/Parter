@@ -57,6 +57,7 @@
             this.partBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.partBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.partBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.btn_Main_Exit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PartsGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partBindingSource3)).BeginInit();
@@ -113,6 +114,8 @@
             this.dgv_PartsGrid.RowTemplate.Height = 33;
             this.dgv_PartsGrid.Size = new System.Drawing.Size(802, 327);
             this.dgv_PartsGrid.TabIndex = 4;
+            this.dgv_PartsGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellClick);
+            this.dgv_PartsGrid.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.CompletedBinding);
             // 
             // dataGridView2
             // 
@@ -202,6 +205,7 @@
             this.Btn_PartsModify.TabIndex = 11;
             this.Btn_PartsModify.Text = "Modify";
             this.Btn_PartsModify.UseVisualStyleBackColor = true;
+            this.Btn_PartsModify.Click += new System.EventHandler(this.Btn_PartsModify_Click);
             // 
             // Btn_PartsDelete
             // 
@@ -211,6 +215,7 @@
             this.Btn_PartsDelete.TabIndex = 12;
             this.Btn_PartsDelete.Text = "Delete";
             this.Btn_PartsDelete.UseVisualStyleBackColor = true;
+            this.Btn_PartsDelete.Click += new System.EventHandler(this.Btn_PartsDelete_Click);
             // 
             // btn_ProductsAdd
             // 
@@ -242,11 +247,12 @@
             // 
             // partIDDataGridViewTextBoxColumn
             // 
+            this.partIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.partIDDataGridViewTextBoxColumn.DataPropertyName = "PartID";
             this.partIDDataGridViewTextBoxColumn.HeaderText = "PartID";
             this.partIDDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.partIDDataGridViewTextBoxColumn.Name = "partIDDataGridViewTextBoxColumn";
-            this.partIDDataGridViewTextBoxColumn.Width = 200;
+            this.partIDDataGridViewTextBoxColumn.Width = 116;
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -254,7 +260,7 @@
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 200;
+            this.nameDataGridViewTextBoxColumn.Width = 150;
             // 
             // priceDataGridViewTextBoxColumn
             // 
@@ -304,11 +310,22 @@
             // 
             this.partBindingSource2.DataSource = typeof(WGU_C968_1_v001.Part);
             // 
-            // Inventory
+            // btn_Main_Exit
+            // 
+            this.btn_Main_Exit.Location = new System.Drawing.Point(1556, 795);
+            this.btn_Main_Exit.Name = "btn_Main_Exit";
+            this.btn_Main_Exit.Size = new System.Drawing.Size(125, 57);
+            this.btn_Main_Exit.TabIndex = 16;
+            this.btn_Main_Exit.Text = "Exit";
+            this.btn_Main_Exit.UseVisualStyleBackColor = true;
+            this.btn_Main_Exit.Click += new System.EventHandler(this.btn_Main_Exit_Click);
+            // 
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1920, 876);
+            this.Controls.Add(this.btn_Main_Exit);
             this.Controls.Add(this.btn_ProductsDelete);
             this.Controls.Add(this.btn_ProductsModify);
             this.Controls.Add(this.btn_ProductsAdd);
@@ -324,7 +341,7 @@
             this.Controls.Add(this.lbl_MainTitle);
             this.Controls.Add(this.lbl_Products);
             this.Controls.Add(this.lbl_Parts);
-            this.Name = "Inventory";
+            this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Inventory System";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PartsGrid)).EndInit();
@@ -358,15 +375,16 @@
         private System.Windows.Forms.Button btn_ProductsModify;
         private System.Windows.Forms.Button btn_ProductsDelete;
         private System.Windows.Forms.BindingSource partBindingSource;
+        private System.Windows.Forms.BindingSource partBindingSource1;
+        private System.Windows.Forms.BindingSource partBindingSource2;
+        private System.Windows.Forms.BindingSource partBindingSource3;
         private System.Windows.Forms.DataGridViewTextBoxColumn partIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn inStockDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn minDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maxDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource partBindingSource1;
-        private System.Windows.Forms.BindingSource partBindingSource2;
-        private System.Windows.Forms.BindingSource partBindingSource3;
+        private System.Windows.Forms.Button btn_Main_Exit;
     }
 }
 
