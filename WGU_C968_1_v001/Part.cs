@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -9,6 +10,8 @@ namespace WGU_C968_1_v001
 {
     public class Part
     {
+        //public static int qCount;
+
         public int PartID { get; set; }
         public string Name { get; set; }
         public double Price { get; set; }
@@ -16,69 +19,40 @@ namespace WGU_C968_1_v001
         public int Min { get; set; }
         public int Max { get; set; }
 
-        public static BindingList<Part> Parts = new BindingList<Part>();
+        // Part Constructor
+
+        public Part(int ID, string name, double price, int stock, int min, int max)
+        {
+            PartID = ID;
+            Name = name;
+            Price = price;
+            InStock = stock;
+            Min = min;
+            Max = max;
+        }
+
+        //FROM WEBINARS
+
+
+        private static BindingList<Part> Parts = new BindingList<Part>();
+
+        public static BindingList<Part> partz
+        {
+            get { return Parts; }
+            set { Parts = value; }
+        }
 
         static Part()
         {
-            Parts.Add(
-                new Part
-                {
-                    PartID = 1,
-                    Name = "Hammer",
-                    Price = 12.99,
-                    InStock = 3,
-                    Min = 0,
-                    Max = 100
-                }
-            );
+            Parts.Add(new Part(1, "Hammer", 12.99, 3, 0, 100));
 
-            Parts.Add(
-                new Part
-                {
-                    PartID = 2,
-                    Name = "Saw",
-                    Price = 13.99,
-                    InStock = 4,
-                    Min = 0,
-                    Max = 10
-                }
-            );
+            Parts.Add(new Part(2, "Saw", 13.99, 4, 0, 10));
 
-            Parts.Add(
-                new Part
-                {
-                    PartID = 3,
-                    Name = "Pliers",
-                    Price = 7.99,
-                    InStock = 25,
-                    Min = 0,
-                    Max = 150
-                }
-            );
+            Parts.Add(new Part(3, "Pliers", 7.99, 25, 0, 150));
 
-            Parts.Add(
-                new Part
-                {
-                    PartID = 4,
-                    Name = "Wrench",
-                    Price = 14.99,
-                    InStock = 15,
-                    Min = 0,
-                    Max = 50
-                }
-            );
+            Parts.Add(new Part(4, "Wrench", 14.99, 15, 0, 50));
 
-            Parts.Add(
-                new Part
-                {
-                    PartID = 5,
-                    Name = "Tape Measure",
-                    Price = 8.99,
-                    InStock = 40,
-                    Min = 0,
-                    Max = 100
-                }
-            );
+            Parts.Add(new Part(5, "Tape Measure", 8.99, 40, 0, 100));
         }
     }
 }

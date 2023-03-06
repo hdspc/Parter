@@ -60,7 +60,6 @@
             this.rdo_ModPart_InHouse.TabStop = true;
             this.rdo_ModPart_InHouse.Text = "In House";
             this.rdo_ModPart_InHouse.UseVisualStyleBackColor = true;
-            this.rdo_ModPart_InHouse.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // rdo_ModPart_Outsourced
             // 
@@ -88,7 +87,6 @@
             this.lbl_ModPart_ID.Size = new System.Drawing.Size(32, 25);
             this.lbl_ModPart_ID.TabIndex = 3;
             this.lbl_ModPart_ID.Text = "ID";
-            this.lbl_ModPart_ID.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbl_ModPart_Name
             // 
@@ -107,7 +105,6 @@
             this.lbl_ModPart_Inventory.Size = new System.Drawing.Size(100, 25);
             this.lbl_ModPart_Inventory.TabIndex = 5;
             this.lbl_ModPart_Inventory.Text = "Inventory";
-            this.lbl_ModPart_Inventory.Click += new System.EventHandler(this.label3_Click);
             // 
             // lbl_ModPart_Price
             // 
@@ -205,6 +202,7 @@
             this.btn_ModPart_Save.TabIndex = 17;
             this.btn_ModPart_Save.Text = "Save";
             this.btn_ModPart_Save.UseVisualStyleBackColor = true;
+            this.btn_ModPart_Save.Click += new System.EventHandler(this.btn_ModPart_Save_Click);
             // 
             // btn_ModPart_Cancel
             // 

@@ -60,6 +60,7 @@
             this.rdo_AddPart_InHouse.TabStop = true;
             this.rdo_AddPart_InHouse.Text = "In House";
             this.rdo_AddPart_InHouse.UseVisualStyleBackColor = true;
+            this.rdo_AddPart_InHouse.CheckedChanged += new System.EventHandler(this.rdo_AddPart_InHouse_CheckedChanged);
             // 
             // rdo_AddPart_Outsourced
             // 
@@ -71,6 +72,7 @@
             this.rdo_AddPart_Outsourced.TabStop = true;
             this.rdo_AddPart_Outsourced.Text = "Outsourced";
             this.rdo_AddPart_Outsourced.UseVisualStyleBackColor = true;
+            this.rdo_AddPart_Outsourced.CheckedChanged += new System.EventHandler(this.rdo_AddPart_Outsourced_CheckedChanged);
             // 
             // txt_AddPart_ID
             // 
@@ -203,6 +205,7 @@
             this.btn_AddPart_Save.TabIndex = 17;
             this.btn_AddPart_Save.Text = "Save";
             this.btn_AddPart_Save.UseVisualStyleBackColor = true;
+            this.btn_AddPart_Save.Click += new System.EventHandler(this.btn_AddPart_Save_Click);
             // 
             // btn_AddPart_Cancel
             // 

@@ -76,7 +76,6 @@
     <Compile Include="ModPart.Designer.cs">
       <DependentUpon>ModPart.cs</DependentUpon>
     </Compile>
-    <Compile Include="ObjectDB.cs" />
     <Compile Include="Part.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

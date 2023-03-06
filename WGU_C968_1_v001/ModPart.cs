@@ -15,19 +15,15 @@ namespace WGU_C968_1_v001
         public ModPart()
         {
             InitializeComponent();
+            txt_ModPart_ID.Text = Part.partz[0].PartID.ToString();
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
+    
 
-        }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+      
 
-        }
-
-        private void label3_Click(object sender, EventArgs e)
+        private void btn_ModPart_Save_Click(object sender, EventArgs e)
         {
 
         }

@@ -1,15 +1,38 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace WGU_C968_1_v001
 {
     public partial class Form1 : Form
     {
+        private int inx;
+
+        /*Rounded Corners
+[DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+private static extern IntPtr CreateRoundRectRgn
+(
+int nLeftRect,     // x-coordinate of upper-left corner
+int nTopRect,      // y-coordinate of upper-left corner
+int nRightRect,    // x-coordinate of lower-right corner
+int nBottomRect,   // y-coordinate of lower-right corner
+int nWidthEllipse, // width of ellipse
+int nHeightEllipse // height of ellipse
+);*/
+
         public Form1()
         {
             InitializeComponent();
+
+            /*Rounded corners
+            this.FormBorderStyle = FormBorderStyle.Sizable;
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            */
+
+
             //Data source
-            dgv_PartsGrid.DataSource = Part.Parts;
+            dgv_PartsGrid.DataSource = Part.partz;
             //Full resource selection
             dgv_PartsGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             //Read only
@@ -19,9 +42,15 @@ namespace WGU_C968_1_v001
 
             //remove bottom row
             dgv_PartsGrid.AllowUserToAddRows = false;
+
+            //Remove row headers
+            dgv_PartsGrid.RowHeadersVisible = false;
+
+            //Auto resize columns (Doesn't work)
+            dgv_PartsGrid.AutoResizeColumns();
         }
 
-
+     
 
    
         private void btn_AddPart_Click(object sender, EventArgs e)
@@ -43,7 +72,7 @@ namespace WGU_C968_1_v001
         //Probably don't need this
         private void CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //jMessageBox.Show(dgv_PartsGrid.CurrentCell.Value + " was clicked");
+            inx = dgv_PartsGrid.CurrentCell.RowIndex;
         }
 
         private void Btn_PartsModify_Click(object sender, EventArgs e)
@@ -69,7 +98,7 @@ namespace WGU_C968_1_v001
             //Remove part from list
             Part P = dgv_PartsGrid.CurrentRow.DataBoundItem as Part;
 
-            Part.Parts.Remove(P);
+            Part.partz.Remove(P);
         }
 
         private void btn_Main_Exit_Click(object sender, EventArgs e)
@@ -78,5 +107,36 @@ namespace WGU_C968_1_v001
             closure.Owner = this;
             closure.ShowDialog();
         }
+       
+        private void btn_PartSearch_Click(object sender, EventArgs e)
+        {
+
+
+            BindingList<Part> TempList = new BindingList<Part>();
+            bool found = false;
+            if (txt_PartSearch.Text != "")
+            {
+                for (int i = 0; i < Part.partz.Count; i++)
+                {
+                    if (Part.partz[i].Name.ToUpper().Contains(txt_PartSearch.Text.ToUpper())
+                       
+                        )
+                    {
+                        TempList.Add(Part.partz[i]);
+                        found = true;
+                    }
+
+                }
+                if (found)
+                {
+                    dgv_PartsGrid.DataSource = TempList;
+                }
+                if (!found)
+                {
+                    MessageBox.Show("Nothing found!");
+                    dgv_PartsGrid.DataSource = Part.partz;
+                }
+            }
+        } 
     }
 }
