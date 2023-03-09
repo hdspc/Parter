@@ -48,11 +48,13 @@ int nHeightEllipse // height of ellipse
 
             //Auto resize columns (Doesn't work)
             dgv_PartsGrid.AutoResizeColumns();
+
+
         }
 
-     
 
-   
+
+
         private void btn_AddPart_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("hello");
@@ -69,7 +71,7 @@ int nHeightEllipse // height of ellipse
             dgv_PartsGrid.ClearSelection();
         }
 
-        //Probably don't need this
+        //Might need this for modify part
         private void CellClick(object sender, DataGridViewCellEventArgs e)
         {
             inx = dgv_PartsGrid.CurrentCell.RowIndex;
@@ -136,6 +138,14 @@ int nHeightEllipse // height of ellipse
                     MessageBox.Show("Nothing found!");
                     dgv_PartsGrid.DataSource = Part.partz;
                 }
+            }
+
+        else
+            {
+
+                txt_PartSearch.BackColor = System.Drawing.Color.Salmon;
+                ;
+                dgv_PartsGrid.DataSource = Part.partz;
             }
         } 
     }

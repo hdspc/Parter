@@ -207,6 +207,7 @@
             // 
             // txt_PartSearch
             // 
+            this.txt_PartSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_PartSearch.Location = new System.Drawing.Point(649, 210);
             this.txt_PartSearch.Name = "txt_PartSearch";
             this.txt_PartSearch.Size = new System.Drawing.Size(185, 31);

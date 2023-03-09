@@ -43,7 +43,7 @@
             this.txt_AddPart_Inventory = new System.Windows.Forms.TextBox();
             this.txt_AddPart_Price = new System.Windows.Forms.TextBox();
             this.txt_AddPart_Max = new System.Windows.Forms.TextBox();
-            this.txt_NewPart_Min = new System.Windows.Forms.TextBox();
+            this.txt_AddPart_Min = new System.Windows.Forms.TextBox();
             this.txt_AddPart_MachineID = new System.Windows.Forms.TextBox();
             this.btn_AddPart_Save = new System.Windows.Forms.Button();
             this.btn_AddPart_Cancel = new System.Windows.Forms.Button();
@@ -183,12 +183,12 @@
             this.txt_AddPart_Max.Size = new System.Drawing.Size(188, 31);
             this.txt_AddPart_Max.TabIndex = 14;
             // 
-            // txt_NewPart_Min
+            // txt_AddPart_Min
             // 
-            this.txt_NewPart_Min.Location = new System.Drawing.Point(577, 537);
-            this.txt_NewPart_Min.Name = "txt_NewPart_Min";
-            this.txt_NewPart_Min.Size = new System.Drawing.Size(188, 31);
-            this.txt_NewPart_Min.TabIndex = 15;
+            this.txt_AddPart_Min.Location = new System.Drawing.Point(577, 537);
+            this.txt_AddPart_Min.Name = "txt_AddPart_Min";
+            this.txt_AddPart_Min.Size = new System.Drawing.Size(188, 31);
+            this.txt_AddPart_Min.TabIndex = 15;
             // 
             // txt_AddPart_MachineID
             // 
@@ -225,7 +225,7 @@
             this.Controls.Add(this.btn_AddPart_Cancel);
             this.Controls.Add(this.btn_AddPart_Save);
             this.Controls.Add(this.txt_AddPart_MachineID);
-            this.Controls.Add(this.txt_NewPart_Min);
+            this.Controls.Add(this.txt_AddPart_Min);
             this.Controls.Add(this.txt_AddPart_Max);
             this.Controls.Add(this.txt_AddPart_Price);
             this.Controls.Add(this.txt_AddPart_Inventory);
@@ -265,7 +265,7 @@
         private System.Windows.Forms.TextBox txt_AddPart_Inventory;
         private System.Windows.Forms.TextBox txt_AddPart_Price;
         private System.Windows.Forms.TextBox txt_AddPart_Max;
-        private System.Windows.Forms.TextBox txt_NewPart_Min;
+        private System.Windows.Forms.TextBox txt_AddPart_Min;
         private System.Windows.Forms.TextBox txt_AddPart_MachineID;
         private System.Windows.Forms.Button btn_AddPart_Save;
         private System.Windows.Forms.Button btn_AddPart_Cancel;
