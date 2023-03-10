@@ -79,13 +79,18 @@ int nHeightEllipse // height of ellipse
 
         private void Btn_PartsModify_Click(object sender, EventArgs e)
         {
+            ///////////////////////////// ModPart.CellClicked = dgv_PartsGrid.CurrentCell.RowIndex; 
+
+            ModPartContainer.currentIndex = dgv_PartsGrid.CurrentCell.RowIndex;
+
             if (dgv_PartsGrid.CurrentRow == null || !dgv_PartsGrid.CurrentRow.Selected)
             {
                 MessageBox.Show("Nothing selected!");
                 return;
                 
             }
-
+            Form parts = new ModPart();
+            parts.ShowDialog(this);
             Part P = dgv_PartsGrid.CurrentRow.DataBoundItem as Part;
         }
 

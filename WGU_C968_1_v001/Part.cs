@@ -19,6 +19,8 @@ namespace WGU_C968_1_v001
         public int Min { get; set; }
         public int Max { get; set; }
 
+        public Part() { }
+
         // Part Constructor
 
         public Part(int ID, string name, double price, int stock, int min, int max)

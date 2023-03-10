@@ -69,7 +69,7 @@
             this.btn_CancelConfirm_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.875F);
             this.btn_CancelConfirm_Cancel.Location = new System.Drawing.Point(487, 329);
             this.btn_CancelConfirm_Cancel.Name = "btn_CancelConfirm_Cancel";
-            this.btn_CancelConfirm_Cancel.Size = new System.Drawing.Size(144, 64);
+            this.btn_CancelConfirm_Cancel.Size = new System.Drawing.Size(160, 64);
             this.btn_CancelConfirm_Cancel.TabIndex = 3;
             this.btn_CancelConfirm_Cancel.Text = "Cancel";
             this.btn_CancelConfirm_Cancel.UseVisualStyleBackColor = true;
