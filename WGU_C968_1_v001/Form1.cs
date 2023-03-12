@@ -57,8 +57,6 @@ int nHeightEllipse // height of ellipse
 
         private void btn_AddPart_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("hello");
-            System.Diagnostics.Debug.WriteLine("This is a adtaagataagagaglog");
             
             // Open Add Part dialog
             Form parts = new AddPart();  
@@ -89,9 +87,23 @@ int nHeightEllipse // height of ellipse
                 return;
                 
             }
-            Form parts = new ModPart();
-            parts.ShowDialog(this);
-            Part P = dgv_PartsGrid.CurrentRow.DataBoundItem as Part;
+
+            else if (dgv_PartsGrid.CurrentRow.DataBoundItem.GetType() == typeof(WGU_C968_1_v001.InHousePart))
+            {
+                InHousePart inPart = (InHousePart)dgv_PartsGrid.CurrentRow.DataBoundItem;
+                new ModPart(inPart).ShowDialog();
+            }
+            
+            else
+            {
+               OutsourcedPart outPart = (OutsourcedPart)dgv_PartsGrid.CurrentRow.DataBoundItem;
+                new ModPart(outPart).ShowDialog();
+            }
+
+
+            //////Form parts = new ModPart();
+            //////parts.ShowDialog(this);
+            //////Part P = dgv_PartsGrid.CurrentRow.DataBoundItem as Part;
         }
 
         private void Btn_PartsDelete_Click(object sender, EventArgs e)
@@ -106,6 +118,8 @@ int nHeightEllipse // height of ellipse
             Part P = dgv_PartsGrid.CurrentRow.DataBoundItem as Part;
 
             Part.partz.Remove(P);
+            dgv_PartsGrid.DataSource = Part.partz;
+
         }
 
         private void btn_Main_Exit_Click(object sender, EventArgs e)

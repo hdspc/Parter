@@ -71,7 +71,9 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="InHousePart.cs" />
-    <Compile Include="ModPart.cs" />
+    <Compile Include="ModPart.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ModPart.Designer.cs">
       <DependentUpon>ModPart.cs</DependentUpon>
     </Compile>

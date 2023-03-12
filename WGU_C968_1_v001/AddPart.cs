@@ -13,8 +13,9 @@ namespace WGU_C968_1_v001
 {
     public partial class AddPart : Form
     {
-        int NewPartID = Part.partz.Count + 1;
+        private int NewPartID = Part.partz.Count + 1;
 
+        
         public AddPart()
         {
             InitializeComponent();
@@ -95,6 +96,7 @@ namespace WGU_C968_1_v001
                     minStock,
                     int.Parse(txt_AddPart_MachineID.Text)
                 );
+                Part.partz.Add( inPart );
             }
             else
             {
@@ -107,6 +109,7 @@ namespace WGU_C968_1_v001
                     minStock,
                     txt_AddPart_MachineID.Text
                 );
+                Part.partz.Add( outPart );
                 // InStock++;
             }
 
@@ -116,9 +119,9 @@ namespace WGU_C968_1_v001
             int NewPartMin = Convert.ToInt32(txt_AddPart_Min.Text);
             int NewPartMax = Convert.ToInt32(txt_AddPart_Max.Text);
 
-            Part.partz.Add(
-                new Part(NewPartID, NewPartName, NewPartPrice, NewPartInventory, 0, 100)
-            );
+            //Part.partz.Add(
+            //    new Part(NewPartID, NewPartName, NewPartPrice, NewPartInventory, 0, 100)
+            //);
 
             this.Close();
         }

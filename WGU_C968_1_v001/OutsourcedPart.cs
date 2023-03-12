@@ -8,6 +8,8 @@ namespace WGU_C968_1_v001
 {
     public class OutsourcedPart : Part
     {
+        private string compName;
+
         public string CompName { get; set; }
 
         public OutsourcedPart() { }

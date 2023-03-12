@@ -43,7 +43,7 @@
             this.txt_ModPart_Inventory = new System.Windows.Forms.TextBox();
             this.txt_ModPart_Price = new System.Windows.Forms.TextBox();
             this.txt_ModPart_Max = new System.Windows.Forms.TextBox();
-            this.txt_NewPart_Min = new System.Windows.Forms.TextBox();
+            this.txt_ModPart_Min = new System.Windows.Forms.TextBox();
             this.txt_ModPart_MachineID = new System.Windows.Forms.TextBox();
             this.btn_ModPart_Save = new System.Windows.Forms.Button();
             this.btn_ModPart_Cancel = new System.Windows.Forms.Button();
@@ -60,6 +60,7 @@
             this.rdo_ModPart_InHouse.TabStop = true;
             this.rdo_ModPart_InHouse.Text = "In House";
             this.rdo_ModPart_InHouse.UseVisualStyleBackColor = true;
+            this.rdo_ModPart_InHouse.CheckedChanged += new System.EventHandler(this.rdo_ModPart_InHouse_CheckedChanged);
             // 
             // rdo_ModPart_Outsourced
             // 
@@ -71,6 +72,7 @@
             this.rdo_ModPart_Outsourced.TabStop = true;
             this.rdo_ModPart_Outsourced.Text = "Outsourced";
             this.rdo_ModPart_Outsourced.UseVisualStyleBackColor = true;
+            this.rdo_ModPart_Outsourced.CheckedChanged += new System.EventHandler(this.rdo_ModPart_Outsourced_CheckedChanged);
             // 
             // txt_ModPart_ID
             // 
@@ -180,12 +182,12 @@
             this.txt_ModPart_Max.Size = new System.Drawing.Size(188, 31);
             this.txt_ModPart_Max.TabIndex = 14;
             // 
-            // txt_NewPart_Min
+            // txt_ModPart_Min
             // 
-            this.txt_NewPart_Min.Location = new System.Drawing.Point(577, 537);
-            this.txt_NewPart_Min.Name = "txt_NewPart_Min";
-            this.txt_NewPart_Min.Size = new System.Drawing.Size(188, 31);
-            this.txt_NewPart_Min.TabIndex = 15;
+            this.txt_ModPart_Min.Location = new System.Drawing.Point(577, 537);
+            this.txt_ModPart_Min.Name = "txt_ModPart_Min";
+            this.txt_ModPart_Min.Size = new System.Drawing.Size(188, 31);
+            this.txt_ModPart_Min.TabIndex = 15;
             // 
             // txt_ModPart_MachineID
             // 
@@ -212,6 +214,7 @@
             this.btn_ModPart_Cancel.TabIndex = 18;
             this.btn_ModPart_Cancel.Text = "Cancel";
             this.btn_ModPart_Cancel.UseVisualStyleBackColor = true;
+            this.btn_ModPart_Cancel.Click += new System.EventHandler(this.btn_ModPart_Cancel_Click);
             // 
             // ModPart
             // 
@@ -221,7 +224,7 @@
             this.Controls.Add(this.btn_ModPart_Cancel);
             this.Controls.Add(this.btn_ModPart_Save);
             this.Controls.Add(this.txt_ModPart_MachineID);
-            this.Controls.Add(this.txt_NewPart_Min);
+            this.Controls.Add(this.txt_ModPart_Min);
             this.Controls.Add(this.txt_ModPart_Max);
             this.Controls.Add(this.txt_ModPart_Price);
             this.Controls.Add(this.txt_ModPart_Inventory);
@@ -261,7 +264,7 @@
         private System.Windows.Forms.TextBox txt_ModPart_Inventory;
         private System.Windows.Forms.TextBox txt_ModPart_Price;
         private System.Windows.Forms.TextBox txt_ModPart_Max;
-        private System.Windows.Forms.TextBox txt_NewPart_Min;
+        private System.Windows.Forms.TextBox txt_ModPart_Min;
         private System.Windows.Forms.TextBox txt_ModPart_MachineID;
         private System.Windows.Forms.Button btn_ModPart_Save;
         private System.Windows.Forms.Button btn_ModPart_Cancel;
