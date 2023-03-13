@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WGU_C968_1_v001
@@ -100,7 +96,7 @@ namespace WGU_C968_1_v001
 
                partz.Remove(P);
                 return true;
-          //  }
+          
         }
 
               public static void UpdatePart(Part partID, Part part)

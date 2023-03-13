@@ -114,15 +114,7 @@ namespace WGU_C968_1_v001
                 // InStock++;
             }
 
-            string NewPartName = txt_AddPart_Name.Text;
-            double NewPartPrice = Convert.ToDouble(txt_AddPart_Price.Text);
-            int NewPartInventory = Convert.ToInt32(txt_AddPart_Inventory.Text);
-            int NewPartMin = Convert.ToInt32(txt_AddPart_Min.Text);
-            int NewPartMax = Convert.ToInt32(txt_AddPart_Max.Text);
-
-            //Part.partz.Add(
-            //    new Part(NewPartID, NewPartName, NewPartPrice, NewPartInventory, 0, 100)
-            //);
+           
 
             this.Close();
         }

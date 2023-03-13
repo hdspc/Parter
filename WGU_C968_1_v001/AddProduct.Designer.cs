@@ -39,7 +39,7 @@
             this.txt_AddProduct_Inventory = new System.Windows.Forms.TextBox();
             this.txt_AddProduct_Price = new System.Windows.Forms.TextBox();
             this.txt_AddProduct_Max = new System.Windows.Forms.TextBox();
-            this.txt_NewPart_Min = new System.Windows.Forms.TextBox();
+            this.txt_AddProduct_Min = new System.Windows.Forms.TextBox();
             this.btn_AddProduct_Save = new System.Windows.Forms.Button();
             this.btn_AddProduct_Cancel = new System.Windows.Forms.Button();
             this.lbl_AddProduct_CandidateParts = new System.Windows.Forms.Label();
@@ -146,12 +146,12 @@
             this.txt_AddProduct_Max.Size = new System.Drawing.Size(188, 31);
             this.txt_AddProduct_Max.TabIndex = 14;
             // 
-            // txt_NewPart_Min
+            // txt_AddProduct_Min
             // 
-            this.txt_NewPart_Min.Location = new System.Drawing.Point(303, 638);
-            this.txt_NewPart_Min.Name = "txt_NewPart_Min";
-            this.txt_NewPart_Min.Size = new System.Drawing.Size(188, 31);
-            this.txt_NewPart_Min.TabIndex = 15;
+            this.txt_AddProduct_Min.Location = new System.Drawing.Point(303, 638);
+            this.txt_AddProduct_Min.Name = "txt_AddProduct_Min";
+            this.txt_AddProduct_Min.Size = new System.Drawing.Size(188, 31);
+            this.txt_AddProduct_Min.TabIndex = 15;
             // 
             // btn_AddProduct_Save
             // 
@@ -282,7 +282,7 @@
             this.Controls.Add(this.lbl_AddProduct_PartsAssociated);
             this.Controls.Add(this.btn_AddProduct_Cancel);
             this.Controls.Add(this.btn_AddProduct_Save);
-            this.Controls.Add(this.txt_NewPart_Min);
+            this.Controls.Add(this.txt_AddProduct_Min);
             this.Controls.Add(this.txt_AddProduct_Max);
             this.Controls.Add(this.txt_AddProduct_Price);
             this.Controls.Add(this.txt_AddProduct_Inventory);
@@ -317,7 +317,7 @@
         private System.Windows.Forms.TextBox txt_AddProduct_Inventory;
         private System.Windows.Forms.TextBox txt_AddProduct_Price;
         private System.Windows.Forms.TextBox txt_AddProduct_Max;
-        private System.Windows.Forms.TextBox txt_NewPart_Min;
+        private System.Windows.Forms.TextBox txt_AddProduct_Min;
         private System.Windows.Forms.Button btn_AddProduct_Save;
         private System.Windows.Forms.Button btn_AddProduct_Cancel;
         private System.Windows.Forms.Label lbl_AddProduct_CandidateParts;

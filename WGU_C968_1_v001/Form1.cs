@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace WGU_C968_1_v001
@@ -48,7 +47,7 @@ int nHeightEllipse // height of ellipse
             //Auto resize columns (Doesn't work)
             dgv_PartsGrid.AutoResizeColumns();
 
-            
+
             dgv_ProductsGrid.DataSource = Inventory.Products;
             dgv_ProductsGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv_ProductsGrid.ReadOnly = true;
@@ -67,13 +66,16 @@ int nHeightEllipse // height of ellipse
 
             Inventory.AddPart(new OutsourcedPart(5, "Tape Measure", 8.99, 40, 9990, 1, "hdspc"));
 
+            Inventory.AddProduct(new Product(23, "Contractor Kit", 3, 3222.3m, 23, 1));
+            Inventory.AddProduct(new Product(23, "Homeowner's Kit", 30, 32.3m, 123, 1));
+
         }
 
         private void btn_AddPart_Click(object sender, EventArgs e)
         {
-            
+
             // Open Add Part dialog
-            Form parts = new AddPart();  
+            Form parts = new AddPart();
             parts.ShowDialog();
         }
 
@@ -91,7 +93,6 @@ int nHeightEllipse // height of ellipse
 
         private void Btn_PartsModify_Click(object sender, EventArgs e)
         {
-            ///////////////////////////// ModPart.CellClicked = dgv_PartsGrid.CurrentCell.RowIndex; 
 
             ModPartContainer.currentIndex = dgv_PartsGrid.CurrentCell.RowIndex;
 
@@ -99,7 +100,7 @@ int nHeightEllipse // height of ellipse
             {
                 MessageBox.Show("Nothing selected!");
                 return;
-                
+
             }
 
             else if (dgv_PartsGrid.CurrentRow.DataBoundItem.GetType() == typeof(WGU_C968_1_v001.InHousePart))
@@ -107,10 +108,10 @@ int nHeightEllipse // height of ellipse
                 InHousePart inPart = (InHousePart)dgv_PartsGrid.CurrentRow.DataBoundItem;
                 new ModPart(inPart).ShowDialog();
             }
-            
+
             else
             {
-               OutsourcedPart outPart = (OutsourcedPart)dgv_PartsGrid.CurrentRow.DataBoundItem;
+                OutsourcedPart outPart = (OutsourcedPart)dgv_PartsGrid.CurrentRow.DataBoundItem;
                 new ModPart(outPart).ShowDialog();
             }
 
@@ -128,9 +129,10 @@ int nHeightEllipse // height of ellipse
                 return;
 
             }
+
             //Remove part from list
             Part P = dgv_PartsGrid.CurrentRow.DataBoundItem as Part;
-                
+
             Inventory.DeletePart(P);
             dgv_PartsGrid.DataSource = Inventory.partz;
 
@@ -142,7 +144,7 @@ int nHeightEllipse // height of ellipse
             closure.Owner = this;
             closure.ShowDialog();
         }
-       
+
         private void btn_PartSearch_Click(object sender, EventArgs e)
         {
             BindingList<Part> TempList = new BindingList<Part>();
@@ -152,18 +154,20 @@ int nHeightEllipse // height of ellipse
                 for (int i = 0; i < Inventory.partz.Count; i++)
                 {
                     if (Inventory.partz[i].Name.ToUpper().Contains(txt_PartSearch.Text.ToUpper())
-                       
-                        )
+
+                       )
                     {
                         TempList.Add(Inventory.partz[i]);
                         found = true;
                     }
 
                 }
+
                 if (found)
                 {
                     dgv_PartsGrid.DataSource = TempList;
                 }
+
                 if (!found)
                 {
                     MessageBox.Show("Nothing found!");
@@ -171,7 +175,7 @@ int nHeightEllipse // height of ellipse
                 }
             }
 
-        else
+            else
             {
 
                 txt_PartSearch.BackColor = System.Drawing.Color.Salmon;
@@ -184,6 +188,45 @@ int nHeightEllipse // height of ellipse
         {
             Form products = new AddProduct();
             products.ShowDialog();
+        }
+
+        private void btn_ProductSearch_Click(object sender, EventArgs e)
+        {
+            BindingList<Product> TempProdList = new BindingList<Product>();
+            bool found = false;
+            if (txt_ProductSearch.Text != "")
+            {
+                for (int i = 0; i < Inventory.Products.Count; i++)
+                {
+                    if (Inventory.Products[i].Name.ToUpper().Contains(txt_ProductSearch.Text.ToUpper())
+
+                       )
+                    {
+                        TempProdList.Add(Inventory.Products[i]);
+                        found = true;
+                    }
+
+                }
+
+                if (found)
+                {
+                    dgv_ProductsGrid.DataSource = TempProdList;
+                }
+
+                if (!found)
+                {
+                    MessageBox.Show("Nothing found!");
+                    dgv_ProductsGrid.DataSource = Inventory.Products;
+                }
+            }
+
+            else
+            {
+
+                txt_ProductSearch.BackColor = System.Drawing.Color.Salmon;
+                ;
+                dgv_ProductsGrid.DataSource = Inventory.Products;
+            }
         }
     }
 }

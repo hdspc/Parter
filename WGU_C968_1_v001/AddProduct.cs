@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WGU_C968_1_v001
@@ -38,18 +32,60 @@ namespace WGU_C968_1_v001
             //Auto resize columns (Doesn't work)
             dgv_AddProduct_CandidateParts.AutoResizeColumns();
 
-            //var candidateParts = new BindingSource();
-            //candidateParts.DataSource = Inventory.partz;
-            //dgv_AddProduct_CandidateParts.DataSource = Inventory.partz;
-
-            //var partsAssociated = new BindingSource();
-            //partsAssociated.DataSource = associatedParts;
-            //dgv_AddProduct_PartsAssociated.DataSource = partsAssociated;
+         
 
         }
 
         private void btn_AddProduct_Save_Click(object sender, EventArgs e)
         {
+            int minStock;
+            int maxStock;
+            int InStock;
+            double price;
+            string name = txt_AddProduct_Name.Text;
+
+
+            try
+            {
+                minStock = int.Parse(txt_AddProduct_Min.Text);
+                maxStock = int.Parse(txt_AddProduct_Max.Text);
+                InStock = int.Parse(txt_AddProduct_Inventory.Text);
+                price = double.Parse(txt_AddProduct_Price.Text);
+
+            }
+            catch
+            {
+                MessageBox.Show(
+                    "The fields for inventory, price, max, and min must contain only numeric values."
+                );
+                return;
+            }
+
+            if (minStock > maxStock)
+            {
+                MessageBox.Show("The minimum value must be less than the maximum value.");
+                return;
+            }
+
+            if (InStock > maxStock || InStock < minStock)
+            {
+                MessageBox.Show(
+                    "A valid inventory value must be within the range of minimum and maximum inventory."
+                );
+                return;
+            }
+
+            Product product = new Product(
+                (Inventory.Products.Count + 1),
+                name,
+                InStock,
+                (decimal)price,
+                maxStock,
+                minStock
+            );
+
+            Inventory.AddProduct(product);
+            this.Close();
 
         }
 
