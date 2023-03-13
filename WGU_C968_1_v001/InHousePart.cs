@@ -13,15 +13,15 @@ namespace WGU_C968_1_v001
 
         public InHousePart() { }
 
-        public InHousePart(int ID, string name, double price, int stock, int max, int min)
-        {
-            PartID = ID;
-            Name = name;
-            InStock = stock;
-            Price = price;
-            Max = max;
-            Min = min;
-        }
+        //public InHousePart(int ID, string name, double price, int stock, int max, int min)
+        //{
+        //    PartID = ID;
+        //    Name = name;
+        //    InStock = stock;
+        //    Price = price;
+        //    Max = max;
+        //    Min = min;
+        //}
 
         public InHousePart(
             int ID,

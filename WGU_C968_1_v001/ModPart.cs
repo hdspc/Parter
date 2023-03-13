@@ -14,7 +14,7 @@ namespace WGU_C968_1_v001
 
     public partial class ModPart : Form
     {
-        private int NewPartID = Part.partz.Count + 1;
+        private int NewPartID = Inventory.partz.Count + 1;
 
 
         //ORIGINAL
@@ -25,11 +25,11 @@ namespace WGU_C968_1_v001
 
         //    InitializeComponent();
         //    txt_ModPart_ID.Enabled = false;
-        //    txt_ModPart_ID.Text = Part.partz[partInfo].PartID.ToString();
-        //    txt_ModPart_Name.Text = Part.partz[partInfo].Name;
-        //    txt_ModPart_Inventory.Text = Part.partz[partInfo].InStock.ToString();
-        //    txt_NewPart_Min.Text = Part.partz[partInfo].Min.ToString();
-        //    txt_ModPart_Max.Text = Part.partz[partInfo].Max.ToString();
+        //    txt_ModPart_ID.Text = Inventory.partz[partInfo].PartID.ToString();
+        //    txt_ModPart_Name.Text = Inventory.partz[partInfo].Name;
+        //    txt_ModPart_Inventory.Text = Inventory.partz[partInfo].InStock.ToString();
+        //    txt_NewPart_Min.Text = Inventory.partz[partInfo].Min.ToString();
+        //    txt_ModPart_Max.Text = Inventory.partz[partInfo].Max.ToString();
 
 
         //}
@@ -132,7 +132,7 @@ namespace WGU_C968_1_v001
                     }
 
                     InHousePart inPart = new InHousePart(
-                        InHousePart.partz[partInfo].PartID,
+                        Inventory.partz[partInfo].PartID,
                         name,
                         price,
                         InStock,
@@ -142,10 +142,10 @@ namespace WGU_C968_1_v001
                     );
 
                     //DELETE original part
-                    Part P = Part.partz[partInfo] as Part;
-                    Part.partz.Remove(P);
+                    Part P = Inventory.partz[partInfo] as Part;
+                    Inventory.partz.Remove(P);
                 // REPLACE with a new one
-                    Part.partz.Add(inPart);
+                    Inventory.partz.Add(inPart);
                 }
 
 
@@ -157,7 +157,7 @@ namespace WGU_C968_1_v001
                 else
                 {
                     OutsourcedPart outPart = new OutsourcedPart(
-                        OutsourcedPart.partz[partInfo].PartID,
+                        Inventory.partz[partInfo].PartID,
                         name,
                         price,
                         InStock,
@@ -165,10 +165,10 @@ namespace WGU_C968_1_v001
                         minStock,
                         txt_ModPart_MachineID.Text
                     );
-                    Part P = Part.partz[partInfo] as Part;
-                    Part.partz.Remove(P);
+                    Part P = Inventory.partz[partInfo] as Part;
+                    Inventory.partz.Remove(P);
 
-                Part.partz.Add(outPart);
+                Inventory.partz.Add(outPart);
                     // InStock++;
                 }
 
@@ -198,7 +198,7 @@ namespace WGU_C968_1_v001
 
         private void rdo_ModPart_Outsourced_CheckedChanged(object sender, EventArgs e)
         {
-            lbl_ModPart_MachineID.Text = "Compnay Name";
+            lbl_ModPart_MachineID.Text = "Company Name";
 
         }
     }

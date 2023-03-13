@@ -13,7 +13,7 @@ namespace WGU_C968_1_v001
 {
     public partial class AddPart : Form
     {
-        private int NewPartID = Part.partz.Count + 1;
+        private int NewPartID = Inventory.partz.Count + 1;
 
         
         public AddPart()
@@ -88,7 +88,7 @@ namespace WGU_C968_1_v001
                 }
 
                 InHousePart inPart = new InHousePart(
-                    (Part.partz.Count + 1),
+                    (Inventory.partz.Count + 1),
                     name,
                     price,
                     InStock,
@@ -96,7 +96,7 @@ namespace WGU_C968_1_v001
                     minStock,
                     int.Parse(txt_AddPart_MachineID.Text)
                 );
-                Part.partz.Add( inPart );
+                Inventory.AddPart( inPart );
             }
             else
             {
@@ -109,7 +109,8 @@ namespace WGU_C968_1_v001
                     minStock,
                     txt_AddPart_MachineID.Text
                 );
-                Part.partz.Add( outPart );
+                //Part.partz.Add( outPart );
+                Inventory.AddPart(outPart);
                 // InStock++;
             }
 
@@ -133,14 +134,14 @@ namespace WGU_C968_1_v001
             closure.ShowDialog();
         }
 
-        private void txt_AddPart_Name_TextChanged(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txt_AddPart_Name.Text))
-            {
-                txt_AddPart_Name.BackColor = System.Drawing.Color.Salmon;
+        //private void txt_AddPart_Name_TextChanged(object sender, EventArgs e)
+        //{
+        //    if (string.IsNullOrEmpty(txt_AddPart_Name.Text))
+        //    {
+        //        txt_AddPart_Name.BackColor = System.Drawing.Color.Salmon;
 
-                btn_AddPart_Save.Enabled = false;
-            }
-        }
+        //        btn_AddPart_Save.Enabled = false;
+        //    }
+        //}
     }
 }

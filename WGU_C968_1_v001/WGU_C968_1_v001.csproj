@@ -71,6 +71,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="InHousePart.cs" />
+    <Compile Include="Inventory.cs" />
     <Compile Include="ModPart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +80,7 @@
     </Compile>
     <Compile Include="OutsourcedPart.cs" />
     <Compile Include="Part.cs" />
+    <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddPart.resx">

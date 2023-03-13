@@ -24,7 +24,6 @@ int nHeightEllipse // height of ellipse
         public Form1()
         {
             InitializeComponent();
-
             /*Rounded corners
             this.FormBorderStyle = FormBorderStyle.Sizable;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
@@ -32,7 +31,7 @@ int nHeightEllipse // height of ellipse
 
 
             //Data source
-            dgv_PartsGrid.DataSource = Part.partz;
+            dgv_PartsGrid.DataSource = Inventory.partz;
             //Full resource selection
             dgv_PartsGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             //Read only
@@ -49,11 +48,26 @@ int nHeightEllipse // height of ellipse
             //Auto resize columns (Doesn't work)
             dgv_PartsGrid.AutoResizeColumns();
 
+            
+            dgv_ProductsGrid.DataSource = Inventory.Products;
+            dgv_ProductsGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv_ProductsGrid.ReadOnly = true;
+            dgv_ProductsGrid.MultiSelect = false;
+            dgv_ProductsGrid.AllowUserToAddRows = false;
+            dgv_ProductsGrid.RowHeadersVisible = false;
+            dgv_ProductsGrid.AutoResizeColumns();
+
+            Inventory.AddPart(new InHousePart(1, "Hammer", 12.99, 3, 6700, 1, 6969));
+
+            Inventory.AddPart(new InHousePart(2, "Saw", 13.99, 4, 9990, 1, 999));
+
+            Inventory.AddPart(new InHousePart(3, "Pliers", 7.99, 25, 9990, 1, 666));
+
+            Inventory.AddPart(new OutsourcedPart(4, "Wrench", 14.99, 15, 9990, 1, "awooga"));
+
+            Inventory.AddPart(new OutsourcedPart(5, "Tape Measure", 8.99, 40, 9990, 1, "hdspc"));
 
         }
-
-
-
 
         private void btn_AddPart_Click(object sender, EventArgs e)
         {
@@ -116,9 +130,9 @@ int nHeightEllipse // height of ellipse
             }
             //Remove part from list
             Part P = dgv_PartsGrid.CurrentRow.DataBoundItem as Part;
-
-            Part.partz.Remove(P);
-            dgv_PartsGrid.DataSource = Part.partz;
+                
+            Inventory.DeletePart(P);
+            dgv_PartsGrid.DataSource = Inventory.partz;
 
         }
 
@@ -131,19 +145,17 @@ int nHeightEllipse // height of ellipse
        
         private void btn_PartSearch_Click(object sender, EventArgs e)
         {
-
-
             BindingList<Part> TempList = new BindingList<Part>();
             bool found = false;
             if (txt_PartSearch.Text != "")
             {
-                for (int i = 0; i < Part.partz.Count; i++)
+                for (int i = 0; i < Inventory.partz.Count; i++)
                 {
-                    if (Part.partz[i].Name.ToUpper().Contains(txt_PartSearch.Text.ToUpper())
+                    if (Inventory.partz[i].Name.ToUpper().Contains(txt_PartSearch.Text.ToUpper())
                        
                         )
                     {
-                        TempList.Add(Part.partz[i]);
+                        TempList.Add(Inventory.partz[i]);
                         found = true;
                     }
 
@@ -155,7 +167,7 @@ int nHeightEllipse // height of ellipse
                 if (!found)
                 {
                     MessageBox.Show("Nothing found!");
-                    dgv_PartsGrid.DataSource = Part.partz;
+                    dgv_PartsGrid.DataSource = Inventory.partz;
                 }
             }
 
@@ -164,8 +176,14 @@ int nHeightEllipse // height of ellipse
 
                 txt_PartSearch.BackColor = System.Drawing.Color.Salmon;
                 ;
-                dgv_PartsGrid.DataSource = Part.partz;
+                dgv_PartsGrid.DataSource = Inventory.partz;
             }
-        } 
+        }
+
+        private void btn_ProductsAdd_Click(object sender, EventArgs e)
+        {
+            Form products = new AddProduct();
+            products.ShowDialog();
+        }
     }
 }
