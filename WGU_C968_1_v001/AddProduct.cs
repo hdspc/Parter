@@ -4,9 +4,7 @@ using System.Windows.Forms;
 
 namespace WGU_C968_1_v001
 {
-
     public partial class AddProduct : Form
-
     {
         BindingList<Part> associatedParts = new BindingList<Part>();
 
@@ -34,8 +32,6 @@ namespace WGU_C968_1_v001
             dgv_AddProduct_PartsAssociated.RowHeadersVisible = false;
             dgv_AddProduct_PartsAssociated.AutoResizeColumns();
             dgv_AddProduct_PartsAssociated.ClearSelection();
-
-
         }
 
         private void btn_AddProduct_Save_Click(object sender, EventArgs e)
@@ -46,14 +42,12 @@ namespace WGU_C968_1_v001
             double price;
             string name = txt_AddProduct_Name.Text;
 
-
             try
             {
                 minStock = int.Parse(txt_AddProduct_Min.Text);
                 maxStock = int.Parse(txt_AddProduct_Max.Text);
                 InStock = int.Parse(txt_AddProduct_Inventory.Text);
                 price = double.Parse(txt_AddProduct_Price.Text);
-
             }
             catch
             {
@@ -93,7 +87,6 @@ namespace WGU_C968_1_v001
 
             Inventory.AddProduct(product);
             this.Close();
-
         }
 
         private void btn_AddProduct_Cancel_Click(object sender, EventArgs e)
@@ -109,14 +102,15 @@ namespace WGU_C968_1_v001
             {
                 for (int i = 0; i < Inventory.partz.Count; i++)
                 {
-                    if (Inventory.partz[i].Name.ToUpper().Contains(txt_AddProduct_Search.Text.ToUpper())
-
-                       )
+                    if (
+                        Inventory.partz[i].Name
+                            .ToUpper()
+                            .Contains(txt_AddProduct_Search.Text.ToUpper())
+                    )
                     {
                         TempList.Add(Inventory.partz[i]);
                         found = true;
                     }
-
                 }
 
                 if (found)
@@ -130,10 +124,8 @@ namespace WGU_C968_1_v001
                     dgv_AddProduct_CandidateParts.DataSource = Inventory.partz;
                 }
             }
-
             else
             {
-
                 txt_AddProduct_Search.BackColor = System.Drawing.Color.Salmon;
                 ;
                 dgv_AddProduct_CandidateParts.DataSource = Inventory.partz;
@@ -142,11 +134,13 @@ namespace WGU_C968_1_v001
 
         private void btn_AddAssociatedProduct_Add_Click(object sender, EventArgs e)
         {
-            if (dgv_AddProduct_CandidateParts.CurrentRow == null || !dgv_AddProduct_CandidateParts.CurrentRow.Selected)
+            if (
+                dgv_AddProduct_CandidateParts.CurrentRow == null
+                || !dgv_AddProduct_CandidateParts.CurrentRow.Selected
+            )
             {
                 MessageBox.Show("Nothing selected!");
                 return;
-
             }
             else
             {
@@ -154,23 +148,24 @@ namespace WGU_C968_1_v001
                 associatedParts.Add(partToAdd);
                 dgv_AddProduct_PartsAssociated.DataSource = associatedParts;
             }
-
         }
 
         private void btn_AddProduct_Delete_Click(object sender, EventArgs e)
         {
-            if (dgv_AddProduct_PartsAssociated.CurrentRow == null || !dgv_AddProduct_PartsAssociated.CurrentRow.Selected)
+            if (
+                dgv_AddProduct_PartsAssociated.CurrentRow == null
+                || !dgv_AddProduct_PartsAssociated.CurrentRow.Selected
+            )
             {
                 MessageBox.Show("Nothing selected!");
                 return;
-
             }
             else
             {
                 Part partToRemove = (Part)dgv_AddProduct_PartsAssociated.CurrentRow.DataBoundItem;
-               // associatedParts.Add(partToAdd);
-               // dgv_AddProduct_PartsAssociated.DataSource = associatedParts;
-               associatedParts.Remove(partToRemove);
+                // associatedParts.Add(partToAdd);
+                // dgv_AddProduct_PartsAssociated.DataSource = associatedParts;
+                associatedParts.Remove(partToRemove);
             }
         }
     }

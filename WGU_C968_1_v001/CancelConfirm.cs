@@ -17,8 +17,6 @@ namespace WGU_C968_1_v001
             InitializeComponent();
         }
 
-    
-
         private void btn_CancelConfirm_Exit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -31,7 +29,6 @@ namespace WGU_C968_1_v001
             Form closure = new CancelConfirm();
             closure.Owner = this;
             this.Close();
-
         }
     }
 }

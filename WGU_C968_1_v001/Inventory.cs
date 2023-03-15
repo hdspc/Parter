@@ -1,11 +1,10 @@
-﻿
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace WGU_C968_1_v001
 {
-     class Inventory
-     {
+    class Inventory
+    {
         public static BindingList<Product> Products = new BindingList<Product>();
 
         private static BindingList<Part> Parts = new BindingList<Part>();
@@ -15,8 +14,6 @@ namespace WGU_C968_1_v001
             get { return Parts; }
             set { Parts = value; }
         }
-
-
 
         public static void AddProduct(Product prod)
         {
@@ -29,7 +26,7 @@ namespace WGU_C968_1_v001
 
             foreach (Product x in Products)
             {
-                if (prodID+1 == x.ProdID)
+                if (prodID + 1 == x.ProdID)
                 {
                     Products.Remove(x);
                     MessageBox.Show("Item removed succesfully.");
@@ -37,7 +34,9 @@ namespace WGU_C968_1_v001
                 }
                 else
                 {
-                    MessageBox.Show("Something went wrong with the product removal process. Please try again.");
+                    MessageBox.Show(
+                        "Something went wrong with the product removal process. Please try again."
+                    );
                     return success = false;
                 }
             }
@@ -95,18 +94,13 @@ namespace WGU_C968_1_v001
         public static bool DeletePart(Part P)
         {
             partz.Remove(P);
-                return true;
-          
+            return true;
         }
 
-              public static void UpdatePart(Part partID, Part part)
+        public static void UpdatePart(Part partID, Part part)
         {
             DeletePart(partID);
             AddPart(part);
         }
-
-
-
-
     }
 }

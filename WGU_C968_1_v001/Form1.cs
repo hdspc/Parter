@@ -47,7 +47,6 @@ int nHeightEllipse // height of ellipse
             //Auto resize columns (Doesn't work)
             dgv_PartsGrid.AutoResizeColumns();
 
-
             dgv_ProductsGrid.DataSource = Inventory.Products;
             dgv_ProductsGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv_ProductsGrid.ReadOnly = true;
@@ -68,12 +67,10 @@ int nHeightEllipse // height of ellipse
 
             Inventory.AddProduct(new Product(1, "Contractor Kit", 3, 3222.3m, 23, 1));
             Inventory.AddProduct(new Product(2, "Homeowner's Kit", 30, 32.3m, 123, 1));
-
         }
 
         private void btn_AddPart_Click(object sender, EventArgs e)
         {
-
             // Open Add Part dialog
             Form parts = new AddPart();
             parts.ShowDialog();
@@ -93,28 +90,26 @@ int nHeightEllipse // height of ellipse
 
         private void Btn_PartsModify_Click(object sender, EventArgs e)
         {
-
             ModPartContainer.currentIndex = dgv_PartsGrid.CurrentCell.RowIndex;
 
             if (dgv_PartsGrid.CurrentRow == null || !dgv_PartsGrid.CurrentRow.Selected)
             {
                 MessageBox.Show("Nothing selected!");
                 return;
-
             }
-
-            else if (dgv_PartsGrid.CurrentRow.DataBoundItem.GetType() == typeof(WGU_C968_1_v001.InHousePart))
+            else if (
+                dgv_PartsGrid.CurrentRow.DataBoundItem.GetType()
+                == typeof(WGU_C968_1_v001.InHousePart)
+            )
             {
                 InHousePart inPart = (InHousePart)dgv_PartsGrid.CurrentRow.DataBoundItem;
                 new ModPart(inPart).ShowDialog();
             }
-
             else
             {
                 OutsourcedPart outPart = (OutsourcedPart)dgv_PartsGrid.CurrentRow.DataBoundItem;
                 new ModPart(outPart).ShowDialog();
             }
-
 
             //////Form parts = new ModPart();
             //////parts.ShowDialog(this);
@@ -127,10 +122,13 @@ int nHeightEllipse // height of ellipse
             {
                 MessageBox.Show("Nothing selected!");
                 return;
-
             }
 
-            DialogResult result = MessageBox.Show("Are you sure you want to delete this part?", "Confirmation", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to delete this part?",
+                "Confirmation",
+                MessageBoxButtons.YesNo
+            );
             if (result == DialogResult.Yes)
             {
                 //Remove part from list
@@ -139,8 +137,8 @@ int nHeightEllipse // height of ellipse
                 Inventory.DeletePart(P);
                 dgv_PartsGrid.DataSource = Inventory.partz;
             }
-            else return;
-
+            else
+                return;
         }
 
         private void btn_Main_Exit_Click(object sender, EventArgs e)
@@ -158,14 +156,11 @@ int nHeightEllipse // height of ellipse
             {
                 for (int i = 0; i < Inventory.partz.Count; i++)
                 {
-                    if (Inventory.partz[i].Name.ToUpper().Contains(txt_PartSearch.Text.ToUpper())
-
-                       )
+                    if (Inventory.partz[i].Name.ToUpper().Contains(txt_PartSearch.Text.ToUpper()))
                     {
                         TempList.Add(Inventory.partz[i]);
                         found = true;
                     }
-
                 }
 
                 if (found)
@@ -179,10 +174,8 @@ int nHeightEllipse // height of ellipse
                     dgv_PartsGrid.DataSource = Inventory.partz;
                 }
             }
-
             else
             {
-
                 txt_PartSearch.BackColor = System.Drawing.Color.Salmon;
                 ;
                 dgv_PartsGrid.DataSource = Inventory.partz;
@@ -203,14 +196,15 @@ int nHeightEllipse // height of ellipse
             {
                 for (int i = 0; i < Inventory.Products.Count; i++)
                 {
-                    if (Inventory.Products[i].Name.ToUpper().Contains(txt_ProductSearch.Text.ToUpper())
-
-                       )
+                    if (
+                        Inventory.Products[i].Name
+                            .ToUpper()
+                            .Contains(txt_ProductSearch.Text.ToUpper())
+                    )
                     {
                         TempProdList.Add(Inventory.Products[i]);
                         found = true;
                     }
-
                 }
 
                 if (found)
@@ -224,10 +218,8 @@ int nHeightEllipse // height of ellipse
                     dgv_ProductsGrid.DataSource = Inventory.Products;
                 }
             }
-
             else
             {
-
                 txt_ProductSearch.BackColor = System.Drawing.Color.Salmon;
                 ;
                 dgv_ProductsGrid.DataSource = Inventory.Products;
@@ -248,16 +240,21 @@ int nHeightEllipse // height of ellipse
             {
                 MessageBox.Show("Nothing selected!");
                 return;
-
             }
 
-            DialogResult result = MessageBox.Show("Are you sure you want to delete this product?", "Confirmation", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to delete this product?",
+                "Confirmation",
+                MessageBoxButtons.YesNo
+            );
             if (result == DialogResult.Yes)
             {
                 Product Prod = (Product)dgv_ProductsGrid.CurrentRow.DataBoundItem;
                 if (Prod.AssociatedParts.Count > 0)
                 {
-                    MessageBox.Show("Cannot delete product with associated parts. Please remove parts attached to this product.");
+                    MessageBox.Show(
+                        "Cannot delete product with associated parts. Please remove parts attached to this product."
+                    );
                     return;
                 }
                 //Remove part from list
@@ -268,7 +265,8 @@ int nHeightEllipse // height of ellipse
                 dgv_ProductsGrid.Rows.RemoveAt(P);
                 dgv_ProductsGrid.DataSource = Inventory.Products;
             }
-            else return;
+            else
+                return;
         }
     }
 }

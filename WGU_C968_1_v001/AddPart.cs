@@ -15,7 +15,6 @@ namespace WGU_C968_1_v001
     {
         private int NewPartID = Inventory.partz.Count + 1;
 
-        
         public AddPart()
         {
             InitializeComponent();
@@ -96,7 +95,7 @@ namespace WGU_C968_1_v001
                     minStock,
                     int.Parse(txt_AddPart_MachineID.Text)
                 );
-                Inventory.AddPart( inPart );
+                Inventory.AddPart(inPart);
             }
             else
             {
@@ -113,8 +112,6 @@ namespace WGU_C968_1_v001
                 Inventory.AddPart(outPart);
                 // InStock++;
             }
-
-           
 
             this.Close();
         }

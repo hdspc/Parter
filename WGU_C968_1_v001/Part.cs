@@ -9,7 +9,7 @@ using WGU_C968_1_v001;
 
 namespace WGU_C968_1_v001
 {
-    public  abstract class Part
+    public abstract class Part
     {
         //public static int qCount;
 
@@ -38,12 +38,5 @@ namespace WGU_C968_1_v001
 
 
         private static BindingList<Part> Parts = new BindingList<Part>();
-
-
-
     }
 }
-
-
-
-

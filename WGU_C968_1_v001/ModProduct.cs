@@ -4,9 +4,7 @@ using System.Windows.Forms;
 
 namespace WGU_C968_1_v001
 {
-
     public partial class ModProduct : Form
-
     {
         BindingList<Part> associatedParts = new BindingList<Part>();
 
@@ -37,23 +35,21 @@ namespace WGU_C968_1_v001
 
             //Autofill Form Data
 
-                txt_ModProduct_ID.Enabled = false;
-                txt_ModProduct_ID.Text = inProduct.ProdID.ToString();
-                txt_ModProduct_Name.Text = inProduct.Name;
-                txt_ModProduct_Price.Text = inProduct.Price.ToString();
-                txt_ModProduct_Inventory.Text = inProduct.InStock.ToString();
-                txt_ModProduct_Min.Text = inProduct.Min.ToString();
-                txt_ModProduct_Max.Text = inProduct.Max.ToString();
+            txt_ModProduct_ID.Enabled = false;
+            txt_ModProduct_ID.Text = inProduct.ProdID.ToString();
+            txt_ModProduct_Name.Text = inProduct.Name;
+            txt_ModProduct_Price.Text = inProduct.Price.ToString();
+            txt_ModProduct_Inventory.Text = inProduct.InStock.ToString();
+            txt_ModProduct_Min.Text = inProduct.Min.ToString();
+            txt_ModProduct_Max.Text = inProduct.Max.ToString();
 
-                foreach (Part part in inProduct.AssociatedParts)
-                {
-                    associatedParts.Add(part);
-                }
-                var botTable = new BindingSource();
-                botTable.DataSource = associatedParts;
-                dgv_ModProduct_PartsAssociated.DataSource = botTable;
-
-
+            foreach (Part part in inProduct.AssociatedParts)
+            {
+                associatedParts.Add(part);
+            }
+            var botTable = new BindingSource();
+            botTable.DataSource = associatedParts;
+            dgv_ModProduct_PartsAssociated.DataSource = botTable;
         }
 
         private void btn_ModProduct_Save_Click(object sender, EventArgs e)
@@ -64,14 +60,12 @@ namespace WGU_C968_1_v001
             double price;
             string name = txt_ModProduct_Name.Text;
 
-
             try
             {
                 minStock = int.Parse(txt_ModProduct_Min.Text);
                 maxStock = int.Parse(txt_ModProduct_Max.Text);
                 InStock = int.Parse(txt_ModProduct_Inventory.Text);
                 price = double.Parse(txt_ModProduct_Price.Text);
-
             }
             catch
             {
@@ -113,7 +107,6 @@ namespace WGU_C968_1_v001
             Inventory.UpdateProduct(product.ProdID, product);
 
             this.Close();
-
         }
 
         private void btn_ModProduct_Cancel_Click(object sender, EventArgs e)
@@ -129,14 +122,15 @@ namespace WGU_C968_1_v001
             {
                 for (int i = 0; i < Inventory.partz.Count; i++)
                 {
-                    if (Inventory.partz[i].Name.ToUpper().Contains(txt_ModProduct_Search.Text.ToUpper())
-
-                       )
+                    if (
+                        Inventory.partz[i].Name
+                            .ToUpper()
+                            .Contains(txt_ModProduct_Search.Text.ToUpper())
+                    )
                     {
                         TempList.Add(Inventory.partz[i]);
                         found = true;
                     }
-
                 }
 
                 if (found)
@@ -150,10 +144,8 @@ namespace WGU_C968_1_v001
                     dgv_ModProduct_CandidateParts.DataSource = Inventory.partz;
                 }
             }
-
             else
             {
-
                 txt_ModProduct_Search.BackColor = System.Drawing.Color.Salmon;
                 ;
                 dgv_ModProduct_CandidateParts.DataSource = Inventory.partz;
@@ -162,11 +154,13 @@ namespace WGU_C968_1_v001
 
         private void btn_AddAssociatedProduct_Add_Click(object sender, EventArgs e)
         {
-            if (dgv_ModProduct_CandidateParts.CurrentRow == null || !dgv_ModProduct_CandidateParts.CurrentRow.Selected)
+            if (
+                dgv_ModProduct_CandidateParts.CurrentRow == null
+                || !dgv_ModProduct_CandidateParts.CurrentRow.Selected
+            )
             {
                 MessageBox.Show("Nothing selected!");
                 return;
-
             }
             else
             {
@@ -174,27 +168,31 @@ namespace WGU_C968_1_v001
                 associatedParts.Add(partToAdd);
                 dgv_ModProduct_PartsAssociated.DataSource = associatedParts;
             }
-
         }
 
         private void btn_ModProduct_Delete_Click(object sender, EventArgs e)
         {
-            if (dgv_ModProduct_PartsAssociated.CurrentRow == null || !dgv_ModProduct_PartsAssociated.CurrentRow.Selected)
+            if (
+                dgv_ModProduct_PartsAssociated.CurrentRow == null
+                || !dgv_ModProduct_PartsAssociated.CurrentRow.Selected
+            )
             {
                 MessageBox.Show("Nothing selected!");
                 return;
             }
 
-            DialogResult result = MessageBox.Show("Are you sure you want to delete this part?", "Confirmation", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to delete this part?",
+                "Confirmation",
+                MessageBoxButtons.YesNo
+            );
             if (result == DialogResult.Yes)
             {
                 Part partToRemove = (Part)dgv_ModProduct_PartsAssociated.CurrentRow.DataBoundItem;
                 associatedParts.Remove(partToRemove);
             }
-            else return;
-
-
-         
+            else
+                return;
         }
     }
 }
