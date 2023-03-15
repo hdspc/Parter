@@ -34,13 +34,6 @@
             this.lbl_Products = new System.Windows.Forms.Label();
             this.lbl_MainTitle = new System.Windows.Forms.Label();
             this.dgv_PartsGrid = new System.Windows.Forms.DataGridView();
-            this.partIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inStockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.minDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.partBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.dgv_ProductsGrid = new System.Windows.Forms.DataGridView();
             this.txt_PartSearch = new System.Windows.Forms.TextBox();
             this.btn_PartSearch = new System.Windows.Forms.Button();
@@ -53,12 +46,19 @@
             this.btn_ProductsModify = new System.Windows.Forms.Button();
             this.btn_ProductsDelete = new System.Windows.Forms.Button();
             this.btn_Main_Exit = new System.Windows.Forms.Button();
+            this.partIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inStockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.minDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.partBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.partBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.partBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.partBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PartsGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.partBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ProductsGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partBindingSource2)).BeginInit();
@@ -114,59 +114,6 @@
             this.dgv_PartsGrid.TabIndex = 4;
             this.dgv_PartsGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellClick);
             this.dgv_PartsGrid.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.CompletedBinding);
-            // 
-            // partIDDataGridViewTextBoxColumn
-            // 
-            this.partIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.partIDDataGridViewTextBoxColumn.DataPropertyName = "PartID";
-            this.partIDDataGridViewTextBoxColumn.HeaderText = "PartID";
-            this.partIDDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.partIDDataGridViewTextBoxColumn.Name = "partIDDataGridViewTextBoxColumn";
-            this.partIDDataGridViewTextBoxColumn.Width = 116;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // inStockDataGridViewTextBoxColumn
-            // 
-            this.inStockDataGridViewTextBoxColumn.DataPropertyName = "InStock";
-            this.inStockDataGridViewTextBoxColumn.HeaderText = "InStock";
-            this.inStockDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.inStockDataGridViewTextBoxColumn.Name = "inStockDataGridViewTextBoxColumn";
-            this.inStockDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // minDataGridViewTextBoxColumn
-            // 
-            this.minDataGridViewTextBoxColumn.DataPropertyName = "Min";
-            this.minDataGridViewTextBoxColumn.HeaderText = "Min";
-            this.minDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.minDataGridViewTextBoxColumn.Name = "minDataGridViewTextBoxColumn";
-            this.minDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // maxDataGridViewTextBoxColumn
-            // 
-            this.maxDataGridViewTextBoxColumn.DataPropertyName = "Max";
-            this.maxDataGridViewTextBoxColumn.HeaderText = "Max";
-            this.maxDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.maxDataGridViewTextBoxColumn.Name = "maxDataGridViewTextBoxColumn";
-            this.maxDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // partBindingSource3
-            // 
-            this.partBindingSource3.DataSource = typeof(WGU_C968_1_v001.Part);
             // 
             // dgv_ProductsGrid
             // 
@@ -267,6 +214,7 @@
             this.btn_ProductsModify.TabIndex = 14;
             this.btn_ProductsModify.Text = "Modify";
             this.btn_ProductsModify.UseVisualStyleBackColor = true;
+            this.btn_ProductsModify.Click += new System.EventHandler(this.btn_ProductsModify_Click);
             // 
             // btn_ProductsDelete
             // 
@@ -276,6 +224,7 @@
             this.btn_ProductsDelete.TabIndex = 15;
             this.btn_ProductsDelete.Text = "Delete";
             this.btn_ProductsDelete.UseVisualStyleBackColor = true;
+            this.btn_ProductsDelete.Click += new System.EventHandler(this.btn_ProductsDelete_Click);
             // 
             // btn_Main_Exit
             // 
@@ -286,6 +235,59 @@
             this.btn_Main_Exit.Text = "Exit";
             this.btn_Main_Exit.UseVisualStyleBackColor = true;
             this.btn_Main_Exit.Click += new System.EventHandler(this.btn_Main_Exit_Click);
+            // 
+            // partIDDataGridViewTextBoxColumn
+            // 
+            this.partIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.partIDDataGridViewTextBoxColumn.DataPropertyName = "PartID";
+            this.partIDDataGridViewTextBoxColumn.HeaderText = "PartID";
+            this.partIDDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.partIDDataGridViewTextBoxColumn.Name = "partIDDataGridViewTextBoxColumn";
+            this.partIDDataGridViewTextBoxColumn.Width = 116;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // inStockDataGridViewTextBoxColumn
+            // 
+            this.inStockDataGridViewTextBoxColumn.DataPropertyName = "InStock";
+            this.inStockDataGridViewTextBoxColumn.HeaderText = "InStock";
+            this.inStockDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.inStockDataGridViewTextBoxColumn.Name = "inStockDataGridViewTextBoxColumn";
+            this.inStockDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // minDataGridViewTextBoxColumn
+            // 
+            this.minDataGridViewTextBoxColumn.DataPropertyName = "Min";
+            this.minDataGridViewTextBoxColumn.HeaderText = "Min";
+            this.minDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.minDataGridViewTextBoxColumn.Name = "minDataGridViewTextBoxColumn";
+            this.minDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // maxDataGridViewTextBoxColumn
+            // 
+            this.maxDataGridViewTextBoxColumn.DataPropertyName = "Max";
+            this.maxDataGridViewTextBoxColumn.HeaderText = "Max";
+            this.maxDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.maxDataGridViewTextBoxColumn.Name = "maxDataGridViewTextBoxColumn";
+            this.maxDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // partBindingSource3
+            // 
+            this.partBindingSource3.DataSource = typeof(WGU_C968_1_v001.Part);
             // 
             // partBindingSource
             // 
@@ -326,8 +328,8 @@
             this.Padding = new System.Windows.Forms.Padding(50, 0, 50, 0);
             this.Text = "Inventory System";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PartsGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.partBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ProductsGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.partBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.partBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.partBindingSource2)).EndInit();

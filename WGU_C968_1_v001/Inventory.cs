@@ -26,16 +26,18 @@ namespace WGU_C968_1_v001
         public static bool RemoveProduct(int prodID)
         {
             bool success = false;
-            foreach (Product prod in Products)
+
+            foreach (Product x in Products)
             {
-                if (prodID == prod.ProdID)
+                if (prodID+1 == x.ProdID)
                 {
-                    Products.Remove(prod);
+                    Products.Remove(x);
+                    MessageBox.Show("Item removed succesfully.");
                     return success = true;
                 }
                 else
                 {
-                    MessageBox.Show("ERROR: Removal failed.");
+                    MessageBox.Show("Something went wrong with the product removal process. Please try again.");
                     return success = false;
                 }
             }

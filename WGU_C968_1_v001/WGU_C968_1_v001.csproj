@@ -78,6 +78,12 @@
     <Compile Include="ModPart.Designer.cs">
       <DependentUpon>ModPart.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModProduct.Designer.cs">
+      <DependentUpon>ModProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="OutsourcedPart.cs" />
     <Compile Include="Part.cs" />
     <Compile Include="Product.cs" />
@@ -97,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModPart.resx">
       <DependentUpon>ModPart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModProduct.resx">
+      <DependentUpon>ModProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

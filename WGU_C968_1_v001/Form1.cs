@@ -66,8 +66,8 @@ int nHeightEllipse // height of ellipse
 
             Inventory.AddPart(new OutsourcedPart(5, "Tape Measure", 8.99, 40, 9990, 1, "hdspc"));
 
-            Inventory.AddProduct(new Product(23, "Contractor Kit", 3, 3222.3m, 23, 1));
-            Inventory.AddProduct(new Product(23, "Homeowner's Kit", 30, 32.3m, 123, 1));
+            Inventory.AddProduct(new Product(1, "Contractor Kit", 3, 3222.3m, 23, 1));
+            Inventory.AddProduct(new Product(2, "Homeowner's Kit", 30, 32.3m, 123, 1));
 
         }
 
@@ -227,6 +227,38 @@ int nHeightEllipse // height of ellipse
                 ;
                 dgv_ProductsGrid.DataSource = Inventory.Products;
             }
+        }
+
+        private void btn_ProductsModify_Click(object sender, EventArgs e)
+        {
+            Product inProduct = (Product)dgv_ProductsGrid.CurrentRow.DataBoundItem;
+
+            new ModProduct(inProduct).ShowDialog();
+            dgv_ProductsGrid.Refresh();
+        }
+
+        private void btn_ProductsDelete_Click(object sender, EventArgs e)
+        {
+            if (dgv_ProductsGrid.CurrentRow == null || !dgv_ProductsGrid.CurrentRow.Selected)
+            {
+                MessageBox.Show("Nothing selected!");
+                return;
+
+            }
+
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this product?", "Confirmation", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+
+                //Remove part from list
+                int P = dgv_ProductsGrid.CurrentRow.Index;
+                Product prod = (Product)dgv_ProductsGrid.CurrentRow.DataBoundItem;
+
+                //Inventory.RemoveProduct(P);
+                dgv_ProductsGrid.Rows.RemoveAt(P);
+                dgv_ProductsGrid.DataSource = Inventory.Products;
+            }
+            else return;
         }
     }
 }

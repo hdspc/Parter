@@ -16,23 +16,25 @@ namespace WGU_C968_1_v001
 
             //Data source
             dgv_AddProduct_CandidateParts.DataSource = Inventory.partz;
-            //Full resource selection
             dgv_AddProduct_CandidateParts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            //Read only
             dgv_AddProduct_CandidateParts.ReadOnly = true;
-            //Multi row select
             dgv_AddProduct_CandidateParts.MultiSelect = false;
-
-            //remove bottom row
             dgv_AddProduct_CandidateParts.AllowUserToAddRows = false;
-
-            //Remove row headers
             dgv_AddProduct_CandidateParts.RowHeadersVisible = false;
-
-            //Auto resize columns (Doesn't work)
             dgv_AddProduct_CandidateParts.AutoResizeColumns();
+            dgv_AddProduct_CandidateParts.ClearSelection();
 
-         
+            txt_AddProduct_ID.Text = Inventory.Products.Count.ToString();
+
+            dgv_AddProduct_PartsAssociated.DataSource = associatedParts;
+            dgv_AddProduct_PartsAssociated.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv_AddProduct_PartsAssociated.ReadOnly = true;
+            dgv_AddProduct_PartsAssociated.MultiSelect = false;
+            dgv_AddProduct_PartsAssociated.AllowUserToAddRows = false;
+            dgv_AddProduct_PartsAssociated.RowHeadersVisible = false;
+            dgv_AddProduct_PartsAssociated.AutoResizeColumns();
+            dgv_AddProduct_PartsAssociated.ClearSelection();
+
 
         }
 
@@ -89,6 +91,82 @@ namespace WGU_C968_1_v001
 
         }
 
-     
+        private void btn_AddProduct_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_AddProduct_Search_Click(object sender, EventArgs e)
+        {
+            BindingList<Part> TempList = new BindingList<Part>();
+            bool found = false;
+            if (txt_AddProduct_Search.Text != "")
+            {
+                for (int i = 0; i < Inventory.partz.Count; i++)
+                {
+                    if (Inventory.partz[i].Name.ToUpper().Contains(txt_AddProduct_Search.Text.ToUpper())
+
+                       )
+                    {
+                        TempList.Add(Inventory.partz[i]);
+                        found = true;
+                    }
+
+                }
+
+                if (found)
+                {
+                    dgv_AddProduct_CandidateParts.DataSource = TempList;
+                }
+
+                if (!found)
+                {
+                    MessageBox.Show("Nothing found!");
+                    dgv_AddProduct_CandidateParts.DataSource = Inventory.partz;
+                }
+            }
+
+            else
+            {
+
+                txt_AddProduct_Search.BackColor = System.Drawing.Color.Salmon;
+                ;
+                dgv_AddProduct_CandidateParts.DataSource = Inventory.partz;
+            }
+        }
+
+        private void btn_AddAssociatedProduct_Add_Click(object sender, EventArgs e)
+        {
+            if (dgv_AddProduct_CandidateParts.CurrentRow == null || !dgv_AddProduct_CandidateParts.CurrentRow.Selected)
+            {
+                MessageBox.Show("Nothing selected!");
+                return;
+
+            }
+            else
+            {
+                Part partToAdd = (Part)dgv_AddProduct_CandidateParts.CurrentRow.DataBoundItem;
+                associatedParts.Add(partToAdd);
+                dgv_AddProduct_PartsAssociated.DataSource = associatedParts;
+            }
+
+        }
+
+        private void btn_AddProduct_Delete_Click(object sender, EventArgs e)
+        {
+            if (dgv_AddProduct_PartsAssociated.CurrentRow == null || !dgv_AddProduct_PartsAssociated.CurrentRow.Selected)
+            {
+                MessageBox.Show("Nothing selected!");
+                return;
+
+            }
+            else
+            {
+                Part partToRemove = (Part)dgv_AddProduct_PartsAssociated.CurrentRow.DataBoundItem;
+               // associatedParts.Add(partToAdd);
+               // dgv_AddProduct_PartsAssociated.DataSource = associatedParts;
+               associatedParts.Remove(partToRemove);
+            }
+        }
     }
 }

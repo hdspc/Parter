@@ -48,10 +48,10 @@
             this.dgv_AddProduct_CandidateParts = new System.Windows.Forms.DataGridView();
             this.dgv_AddProduct_PartsAssociated = new System.Windows.Forms.DataGridView();
             this.btn_AddProduct_Search = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_AddProduct_Search = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbl_AddProduct_Title = new System.Windows.Forms.Label();
-            this.btn_AddProduct_Add = new System.Windows.Forms.Button();
+            this.btn_AddAssociatedProduct_Add = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_AddProduct_CandidateParts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_AddProduct_PartsAssociated)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -59,6 +59,7 @@
             // 
             // txt_AddProduct_ID
             // 
+            this.txt_AddProduct_ID.Enabled = false;
             this.txt_AddProduct_ID.Location = new System.Drawing.Point(303, 206);
             this.txt_AddProduct_ID.Name = "txt_AddProduct_ID";
             this.txt_AddProduct_ID.Size = new System.Drawing.Size(188, 31);
@@ -155,7 +156,7 @@
             // 
             // btn_AddProduct_Save
             // 
-            this.btn_AddProduct_Save.Location = new System.Drawing.Point(1111, 870);
+            this.btn_AddProduct_Save.Location = new System.Drawing.Point(1314, 870);
             this.btn_AddProduct_Save.Name = "btn_AddProduct_Save";
             this.btn_AddProduct_Save.Size = new System.Drawing.Size(177, 65);
             this.btn_AddProduct_Save.TabIndex = 17;
@@ -165,12 +166,13 @@
             // 
             // btn_AddProduct_Cancel
             // 
-            this.btn_AddProduct_Cancel.Location = new System.Drawing.Point(1532, 870);
+            this.btn_AddProduct_Cancel.Location = new System.Drawing.Point(1508, 870);
             this.btn_AddProduct_Cancel.Name = "btn_AddProduct_Cancel";
             this.btn_AddProduct_Cancel.Size = new System.Drawing.Size(177, 65);
             this.btn_AddProduct_Cancel.TabIndex = 18;
             this.btn_AddProduct_Cancel.Text = "Cancel";
             this.btn_AddProduct_Cancel.UseVisualStyleBackColor = true;
+            this.btn_AddProduct_Cancel.Click += new System.EventHandler(this.btn_AddProduct_Cancel_Click);
             // 
             // lbl_AddProduct_CandidateParts
             // 
@@ -192,12 +194,13 @@
             // 
             // btn_AddProduct_Delete
             // 
-            this.btn_AddProduct_Delete.Location = new System.Drawing.Point(1329, 870);
+            this.btn_AddProduct_Delete.Location = new System.Drawing.Point(1508, 731);
             this.btn_AddProduct_Delete.Name = "btn_AddProduct_Delete";
             this.btn_AddProduct_Delete.Size = new System.Drawing.Size(177, 65);
             this.btn_AddProduct_Delete.TabIndex = 21;
             this.btn_AddProduct_Delete.Text = "Delete";
             this.btn_AddProduct_Delete.UseVisualStyleBackColor = true;
+            this.btn_AddProduct_Delete.Click += new System.EventHandler(this.btn_AddProduct_Delete_Click);
             // 
             // dgv_AddProduct_CandidateParts
             // 
@@ -216,7 +219,7 @@
             this.dgv_AddProduct_PartsAssociated.Name = "dgv_AddProduct_PartsAssociated";
             this.dgv_AddProduct_PartsAssociated.RowHeadersWidth = 82;
             this.dgv_AddProduct_PartsAssociated.RowTemplate.Height = 33;
-            this.dgv_AddProduct_PartsAssociated.Size = new System.Drawing.Size(1041, 289);
+            this.dgv_AddProduct_PartsAssociated.Size = new System.Drawing.Size(1041, 182);
             this.dgv_AddProduct_PartsAssociated.TabIndex = 23;
             // 
             // btn_AddProduct_Search
@@ -228,18 +231,20 @@
             this.btn_AddProduct_Search.TabIndex = 24;
             this.btn_AddProduct_Search.Text = "Search";
             this.btn_AddProduct_Search.UseVisualStyleBackColor = true;
+            this.btn_AddProduct_Search.Click += new System.EventHandler(this.btn_AddProduct_Search_Click);
             // 
-            // textBox1
+            // txt_AddProduct_Search
             // 
-            this.textBox1.Location = new System.Drawing.Point(420, 28);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(247, 45);
-            this.textBox1.TabIndex = 25;
+            this.txt_AddProduct_Search.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_AddProduct_Search.Location = new System.Drawing.Point(420, 28);
+            this.txt_AddProduct_Search.Multiline = true;
+            this.txt_AddProduct_Search.Name = "txt_AddProduct_Search";
+            this.txt_AddProduct_Search.Size = new System.Drawing.Size(247, 45);
+            this.txt_AddProduct_Search.TabIndex = 25;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txt_AddProduct_Search);
             this.groupBox1.Controls.Add(this.btn_AddProduct_Search);
             this.groupBox1.Controls.Add(this.lbl_AddProduct_CandidateParts);
             this.groupBox1.Location = new System.Drawing.Point(848, 22);
@@ -258,14 +263,15 @@
             this.lbl_AddProduct_Title.TabIndex = 27;
             this.lbl_AddProduct_Title.Text = "Add Product";
             // 
-            // btn_AddProduct_Add
+            // btn_AddAssociatedProduct_Add
             // 
-            this.btn_AddProduct_Add.Location = new System.Drawing.Point(1385, 401);
-            this.btn_AddProduct_Add.Name = "btn_AddProduct_Add";
-            this.btn_AddProduct_Add.Size = new System.Drawing.Size(177, 65);
-            this.btn_AddProduct_Add.TabIndex = 28;
-            this.btn_AddProduct_Add.Text = "Add";
-            this.btn_AddProduct_Add.UseVisualStyleBackColor = true;
+            this.btn_AddAssociatedProduct_Add.Location = new System.Drawing.Point(1508, 401);
+            this.btn_AddAssociatedProduct_Add.Name = "btn_AddAssociatedProduct_Add";
+            this.btn_AddAssociatedProduct_Add.Size = new System.Drawing.Size(177, 65);
+            this.btn_AddAssociatedProduct_Add.TabIndex = 28;
+            this.btn_AddAssociatedProduct_Add.Text = "Add";
+            this.btn_AddAssociatedProduct_Add.UseVisualStyleBackColor = true;
+            this.btn_AddAssociatedProduct_Add.Click += new System.EventHandler(this.btn_AddAssociatedProduct_Add_Click);
             // 
             // AddProduct
             // 
@@ -273,7 +279,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1769, 988);
-            this.Controls.Add(this.btn_AddProduct_Add);
+            this.Controls.Add(this.btn_AddAssociatedProduct_Add);
             this.Controls.Add(this.lbl_AddProduct_Title);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgv_AddProduct_PartsAssociated);
@@ -326,9 +332,9 @@
         private System.Windows.Forms.DataGridView dgv_AddProduct_CandidateParts;
         private System.Windows.Forms.DataGridView dgv_AddProduct_PartsAssociated;
         private System.Windows.Forms.Button btn_AddProduct_Search;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_AddProduct_Search;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lbl_AddProduct_Title;
-        private System.Windows.Forms.Button btn_AddProduct_Add;
+        private System.Windows.Forms.Button btn_AddAssociatedProduct_Add;
     }
 }
