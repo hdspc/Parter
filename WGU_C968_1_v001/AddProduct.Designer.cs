@@ -59,7 +59,9 @@
             // 
             // txt_AddProduct_ID
             // 
+            this.txt_AddProduct_ID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_AddProduct_ID.Enabled = false;
+            this.txt_AddProduct_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
             this.txt_AddProduct_ID.Location = new System.Drawing.Point(303, 206);
             this.txt_AddProduct_ID.Name = "txt_AddProduct_ID";
             this.txt_AddProduct_ID.Size = new System.Drawing.Size(188, 31);
@@ -68,59 +70,67 @@
             // lbl_AddProduct_ID
             // 
             this.lbl_AddProduct_ID.AutoSize = true;
+            this.lbl_AddProduct_ID.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.lbl_AddProduct_ID.Location = new System.Drawing.Point(175, 209);
             this.lbl_AddProduct_ID.Name = "lbl_AddProduct_ID";
-            this.lbl_AddProduct_ID.Size = new System.Drawing.Size(32, 25);
+            this.lbl_AddProduct_ID.Size = new System.Drawing.Size(34, 30);
             this.lbl_AddProduct_ID.TabIndex = 3;
             this.lbl_AddProduct_ID.Text = "ID";
             // 
             // lbl_AddProduct_Name
             // 
             this.lbl_AddProduct_Name.AutoSize = true;
+            this.lbl_AddProduct_Name.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.lbl_AddProduct_Name.Location = new System.Drawing.Point(175, 285);
             this.lbl_AddProduct_Name.Name = "lbl_AddProduct_Name";
-            this.lbl_AddProduct_Name.Size = new System.Drawing.Size(68, 25);
+            this.lbl_AddProduct_Name.Size = new System.Drawing.Size(69, 30);
             this.lbl_AddProduct_Name.TabIndex = 4;
             this.lbl_AddProduct_Name.Text = "Name";
             // 
             // lbl_AddProduct_Inventory
             // 
             this.lbl_AddProduct_Inventory.AutoSize = true;
+            this.lbl_AddProduct_Inventory.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.lbl_AddProduct_Inventory.Location = new System.Drawing.Point(175, 363);
             this.lbl_AddProduct_Inventory.Name = "lbl_AddProduct_Inventory";
-            this.lbl_AddProduct_Inventory.Size = new System.Drawing.Size(100, 25);
+            this.lbl_AddProduct_Inventory.Size = new System.Drawing.Size(100, 30);
             this.lbl_AddProduct_Inventory.TabIndex = 5;
             this.lbl_AddProduct_Inventory.Text = "Inventory";
             // 
             // lbl_AddProduct_Price
             // 
             this.lbl_AddProduct_Price.AutoSize = true;
+            this.lbl_AddProduct_Price.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.lbl_AddProduct_Price.Location = new System.Drawing.Point(175, 441);
             this.lbl_AddProduct_Price.Name = "lbl_AddProduct_Price";
-            this.lbl_AddProduct_Price.Size = new System.Drawing.Size(111, 25);
+            this.lbl_AddProduct_Price.Size = new System.Drawing.Size(107, 30);
             this.lbl_AddProduct_Price.TabIndex = 6;
             this.lbl_AddProduct_Price.Text = "Price/Cost";
             // 
             // lbl_AddProduct_Max
             // 
             this.lbl_AddProduct_Max.AutoSize = true;
+            this.lbl_AddProduct_Max.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.lbl_AddProduct_Max.Location = new System.Drawing.Point(175, 537);
             this.lbl_AddProduct_Max.Name = "lbl_AddProduct_Max";
-            this.lbl_AddProduct_Max.Size = new System.Drawing.Size(53, 25);
+            this.lbl_AddProduct_Max.Size = new System.Drawing.Size(53, 30);
             this.lbl_AddProduct_Max.TabIndex = 7;
             this.lbl_AddProduct_Max.Text = "Max";
             // 
             // lbl_AddProduct_Min
             // 
             this.lbl_AddProduct_Min.AutoSize = true;
+            this.lbl_AddProduct_Min.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.lbl_AddProduct_Min.Location = new System.Drawing.Point(175, 638);
             this.lbl_AddProduct_Min.Name = "lbl_AddProduct_Min";
-            this.lbl_AddProduct_Min.Size = new System.Drawing.Size(47, 25);
+            this.lbl_AddProduct_Min.Size = new System.Drawing.Size(49, 30);
             this.lbl_AddProduct_Min.TabIndex = 8;
             this.lbl_AddProduct_Min.Text = "Min";
             // 
             // txt_AddProduct_Name
             // 
+            this.txt_AddProduct_Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_AddProduct_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
             this.txt_AddProduct_Name.Location = new System.Drawing.Point(303, 285);
             this.txt_AddProduct_Name.Name = "txt_AddProduct_Name";
             this.txt_AddProduct_Name.Size = new System.Drawing.Size(188, 31);
@@ -128,6 +138,8 @@
             // 
             // txt_AddProduct_Inventory
             // 
+            this.txt_AddProduct_Inventory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_AddProduct_Inventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
             this.txt_AddProduct_Inventory.Location = new System.Drawing.Point(303, 363);
             this.txt_AddProduct_Inventory.Name = "txt_AddProduct_Inventory";
             this.txt_AddProduct_Inventory.Size = new System.Drawing.Size(188, 31);
@@ -135,6 +147,8 @@
             // 
             // txt_AddProduct_Price
             // 
+            this.txt_AddProduct_Price.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_AddProduct_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
             this.txt_AddProduct_Price.Location = new System.Drawing.Point(303, 435);
             this.txt_AddProduct_Price.Name = "txt_AddProduct_Price";
             this.txt_AddProduct_Price.Size = new System.Drawing.Size(188, 31);
@@ -142,6 +156,8 @@
             // 
             // txt_AddProduct_Max
             // 
+            this.txt_AddProduct_Max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_AddProduct_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
             this.txt_AddProduct_Max.Location = new System.Drawing.Point(303, 537);
             this.txt_AddProduct_Max.Name = "txt_AddProduct_Max";
             this.txt_AddProduct_Max.Size = new System.Drawing.Size(188, 31);
@@ -149,6 +165,8 @@
             // 
             // txt_AddProduct_Min
             // 
+            this.txt_AddProduct_Min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_AddProduct_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
             this.txt_AddProduct_Min.Location = new System.Drawing.Point(303, 638);
             this.txt_AddProduct_Min.Name = "txt_AddProduct_Min";
             this.txt_AddProduct_Min.Size = new System.Drawing.Size(188, 31);
@@ -156,6 +174,7 @@
             // 
             // btn_AddProduct_Save
             // 
+            this.btn_AddProduct_Save.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.btn_AddProduct_Save.Location = new System.Drawing.Point(1314, 870);
             this.btn_AddProduct_Save.Name = "btn_AddProduct_Save";
             this.btn_AddProduct_Save.Size = new System.Drawing.Size(177, 65);
@@ -166,6 +185,7 @@
             // 
             // btn_AddProduct_Cancel
             // 
+            this.btn_AddProduct_Cancel.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.btn_AddProduct_Cancel.Location = new System.Drawing.Point(1508, 870);
             this.btn_AddProduct_Cancel.Name = "btn_AddProduct_Cancel";
             this.btn_AddProduct_Cancel.Size = new System.Drawing.Size(177, 65);
@@ -177,23 +197,26 @@
             // lbl_AddProduct_CandidateParts
             // 
             this.lbl_AddProduct_CandidateParts.AutoSize = true;
-            this.lbl_AddProduct_CandidateParts.Location = new System.Drawing.Point(41, 40);
+            this.lbl_AddProduct_CandidateParts.Font = new System.Drawing.Font("Segoe UI", 10.875F);
+            this.lbl_AddProduct_CandidateParts.Location = new System.Drawing.Point(639, 65);
             this.lbl_AddProduct_CandidateParts.Name = "lbl_AddProduct_CandidateParts";
-            this.lbl_AddProduct_CandidateParts.Size = new System.Drawing.Size(190, 25);
+            this.lbl_AddProduct_CandidateParts.Size = new System.Drawing.Size(255, 40);
             this.lbl_AddProduct_CandidateParts.TabIndex = 19;
             this.lbl_AddProduct_CandidateParts.Text = "All candidate parts";
             // 
             // lbl_AddProduct_PartsAssociated
             // 
             this.lbl_AddProduct_PartsAssociated.AutoSize = true;
-            this.lbl_AddProduct_PartsAssociated.Location = new System.Drawing.Point(863, 424);
+            this.lbl_AddProduct_PartsAssociated.Font = new System.Drawing.Font("Segoe UI", 10.875F);
+            this.lbl_AddProduct_PartsAssociated.Location = new System.Drawing.Point(639, 450);
             this.lbl_AddProduct_PartsAssociated.Name = "lbl_AddProduct_PartsAssociated";
-            this.lbl_AddProduct_PartsAssociated.Size = new System.Drawing.Size(334, 25);
+            this.lbl_AddProduct_PartsAssociated.Size = new System.Drawing.Size(443, 40);
             this.lbl_AddProduct_PartsAssociated.TabIndex = 20;
             this.lbl_AddProduct_PartsAssociated.Text = "Parts associated with this product";
             // 
             // btn_AddProduct_Delete
             // 
+            this.btn_AddProduct_Delete.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.btn_AddProduct_Delete.Location = new System.Drawing.Point(1508, 731);
             this.btn_AddProduct_Delete.Name = "btn_AddProduct_Delete";
             this.btn_AddProduct_Delete.Size = new System.Drawing.Size(177, 65);
@@ -224,7 +247,8 @@
             // 
             // btn_AddProduct_Search
             // 
-            this.btn_AddProduct_Search.Location = new System.Drawing.Point(293, 30);
+            this.btn_AddProduct_Search.Font = new System.Drawing.Font("Segoe UI", 7.875F);
+            this.btn_AddProduct_Search.Location = new System.Drawing.Point(12, 18);
             this.btn_AddProduct_Search.Name = "btn_AddProduct_Search";
             this.btn_AddProduct_Search.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_AddProduct_Search.Size = new System.Drawing.Size(108, 45);
@@ -236,7 +260,7 @@
             // txt_AddProduct_Search
             // 
             this.txt_AddProduct_Search.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_AddProduct_Search.Location = new System.Drawing.Point(420, 28);
+            this.txt_AddProduct_Search.Location = new System.Drawing.Point(139, 18);
             this.txt_AddProduct_Search.Multiline = true;
             this.txt_AddProduct_Search.Name = "txt_AddProduct_Search";
             this.txt_AddProduct_Search.Size = new System.Drawing.Size(247, 45);
@@ -246,25 +270,25 @@
             // 
             this.groupBox1.Controls.Add(this.txt_AddProduct_Search);
             this.groupBox1.Controls.Add(this.btn_AddProduct_Search);
-            this.groupBox1.Controls.Add(this.lbl_AddProduct_CandidateParts);
-            this.groupBox1.Location = new System.Drawing.Point(848, 22);
+            this.groupBox1.Location = new System.Drawing.Point(1296, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(723, 79);
+            this.groupBox1.Size = new System.Drawing.Size(412, 79);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             // 
             // lbl_AddProduct_Title
             // 
             this.lbl_AddProduct_Title.AutoSize = true;
-            this.lbl_AddProduct_Title.Font = new System.Drawing.Font("Bahnschrift SemiBold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_AddProduct_Title.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.lbl_AddProduct_Title.Location = new System.Drawing.Point(215, 53);
             this.lbl_AddProduct_Title.Name = "lbl_AddProduct_Title";
-            this.lbl_AddProduct_Title.Size = new System.Drawing.Size(241, 48);
+            this.lbl_AddProduct_Title.Size = new System.Drawing.Size(246, 54);
             this.lbl_AddProduct_Title.TabIndex = 27;
             this.lbl_AddProduct_Title.Text = "Add Product";
             // 
             // btn_AddAssociatedProduct_Add
             // 
+            this.btn_AddAssociatedProduct_Add.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.btn_AddAssociatedProduct_Add.Location = new System.Drawing.Point(1508, 401);
             this.btn_AddAssociatedProduct_Add.Name = "btn_AddAssociatedProduct_Add";
             this.btn_AddAssociatedProduct_Add.Size = new System.Drawing.Size(177, 65);
@@ -281,6 +305,7 @@
             this.ClientSize = new System.Drawing.Size(1769, 988);
             this.Controls.Add(this.btn_AddAssociatedProduct_Add);
             this.Controls.Add(this.lbl_AddProduct_Title);
+            this.Controls.Add(this.lbl_AddProduct_CandidateParts);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgv_AddProduct_PartsAssociated);
             this.Controls.Add(this.dgv_AddProduct_CandidateParts);

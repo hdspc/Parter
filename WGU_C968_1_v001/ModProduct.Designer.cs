@@ -59,7 +59,9 @@
             // 
             // txt_ModProduct_ID
             // 
+            this.txt_ModProduct_ID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_ModProduct_ID.Enabled = false;
+            this.txt_ModProduct_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
             this.txt_ModProduct_ID.Location = new System.Drawing.Point(303, 206);
             this.txt_ModProduct_ID.Name = "txt_ModProduct_ID";
             this.txt_ModProduct_ID.Size = new System.Drawing.Size(188, 31);
@@ -68,59 +70,67 @@
             // lbl_ModProduct_ID
             // 
             this.lbl_ModProduct_ID.AutoSize = true;
+            this.lbl_ModProduct_ID.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.lbl_ModProduct_ID.Location = new System.Drawing.Point(175, 209);
             this.lbl_ModProduct_ID.Name = "lbl_ModProduct_ID";
-            this.lbl_ModProduct_ID.Size = new System.Drawing.Size(32, 25);
+            this.lbl_ModProduct_ID.Size = new System.Drawing.Size(34, 30);
             this.lbl_ModProduct_ID.TabIndex = 3;
             this.lbl_ModProduct_ID.Text = "ID";
             // 
             // lbl_ModProduct_Name
             // 
             this.lbl_ModProduct_Name.AutoSize = true;
+            this.lbl_ModProduct_Name.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.lbl_ModProduct_Name.Location = new System.Drawing.Point(175, 285);
             this.lbl_ModProduct_Name.Name = "lbl_ModProduct_Name";
-            this.lbl_ModProduct_Name.Size = new System.Drawing.Size(68, 25);
+            this.lbl_ModProduct_Name.Size = new System.Drawing.Size(69, 30);
             this.lbl_ModProduct_Name.TabIndex = 4;
             this.lbl_ModProduct_Name.Text = "Name";
             // 
             // lbl_ModProduct_Inventory
             // 
             this.lbl_ModProduct_Inventory.AutoSize = true;
+            this.lbl_ModProduct_Inventory.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.lbl_ModProduct_Inventory.Location = new System.Drawing.Point(175, 363);
             this.lbl_ModProduct_Inventory.Name = "lbl_ModProduct_Inventory";
-            this.lbl_ModProduct_Inventory.Size = new System.Drawing.Size(100, 25);
+            this.lbl_ModProduct_Inventory.Size = new System.Drawing.Size(100, 30);
             this.lbl_ModProduct_Inventory.TabIndex = 5;
             this.lbl_ModProduct_Inventory.Text = "Inventory";
             // 
             // lbl_ModProduct_Price
             // 
             this.lbl_ModProduct_Price.AutoSize = true;
+            this.lbl_ModProduct_Price.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.lbl_ModProduct_Price.Location = new System.Drawing.Point(175, 441);
             this.lbl_ModProduct_Price.Name = "lbl_ModProduct_Price";
-            this.lbl_ModProduct_Price.Size = new System.Drawing.Size(111, 25);
+            this.lbl_ModProduct_Price.Size = new System.Drawing.Size(107, 30);
             this.lbl_ModProduct_Price.TabIndex = 6;
             this.lbl_ModProduct_Price.Text = "Price/Cost";
             // 
             // lbl_ModProduct_Max
             // 
             this.lbl_ModProduct_Max.AutoSize = true;
+            this.lbl_ModProduct_Max.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.lbl_ModProduct_Max.Location = new System.Drawing.Point(175, 537);
             this.lbl_ModProduct_Max.Name = "lbl_ModProduct_Max";
-            this.lbl_ModProduct_Max.Size = new System.Drawing.Size(53, 25);
+            this.lbl_ModProduct_Max.Size = new System.Drawing.Size(53, 30);
             this.lbl_ModProduct_Max.TabIndex = 7;
             this.lbl_ModProduct_Max.Text = "Max";
             // 
             // lbl_ModProduct_Min
             // 
             this.lbl_ModProduct_Min.AutoSize = true;
+            this.lbl_ModProduct_Min.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.lbl_ModProduct_Min.Location = new System.Drawing.Point(175, 638);
             this.lbl_ModProduct_Min.Name = "lbl_ModProduct_Min";
-            this.lbl_ModProduct_Min.Size = new System.Drawing.Size(47, 25);
+            this.lbl_ModProduct_Min.Size = new System.Drawing.Size(49, 30);
             this.lbl_ModProduct_Min.TabIndex = 8;
             this.lbl_ModProduct_Min.Text = "Min";
             // 
             // txt_ModProduct_Name
             // 
+            this.txt_ModProduct_Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_ModProduct_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
             this.txt_ModProduct_Name.Location = new System.Drawing.Point(303, 285);
             this.txt_ModProduct_Name.Name = "txt_ModProduct_Name";
             this.txt_ModProduct_Name.Size = new System.Drawing.Size(188, 31);
@@ -128,6 +138,8 @@
             // 
             // txt_ModProduct_Inventory
             // 
+            this.txt_ModProduct_Inventory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_ModProduct_Inventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
             this.txt_ModProduct_Inventory.Location = new System.Drawing.Point(303, 363);
             this.txt_ModProduct_Inventory.Name = "txt_ModProduct_Inventory";
             this.txt_ModProduct_Inventory.Size = new System.Drawing.Size(188, 31);
@@ -135,6 +147,8 @@
             // 
             // txt_ModProduct_Price
             // 
+            this.txt_ModProduct_Price.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_ModProduct_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
             this.txt_ModProduct_Price.Location = new System.Drawing.Point(303, 435);
             this.txt_ModProduct_Price.Name = "txt_ModProduct_Price";
             this.txt_ModProduct_Price.Size = new System.Drawing.Size(188, 31);
@@ -142,6 +156,8 @@
             // 
             // txt_ModProduct_Max
             // 
+            this.txt_ModProduct_Max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_ModProduct_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
             this.txt_ModProduct_Max.Location = new System.Drawing.Point(303, 537);
             this.txt_ModProduct_Max.Name = "txt_ModProduct_Max";
             this.txt_ModProduct_Max.Size = new System.Drawing.Size(188, 31);
@@ -149,6 +165,8 @@
             // 
             // txt_ModProduct_Min
             // 
+            this.txt_ModProduct_Min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_ModProduct_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
             this.txt_ModProduct_Min.Location = new System.Drawing.Point(303, 638);
             this.txt_ModProduct_Min.Name = "txt_ModProduct_Min";
             this.txt_ModProduct_Min.Size = new System.Drawing.Size(188, 31);
@@ -156,6 +174,7 @@
             // 
             // btn_ModProduct_Save
             // 
+            this.btn_ModProduct_Save.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.btn_ModProduct_Save.Location = new System.Drawing.Point(1314, 870);
             this.btn_ModProduct_Save.Name = "btn_ModProduct_Save";
             this.btn_ModProduct_Save.Size = new System.Drawing.Size(177, 65);
@@ -166,6 +185,7 @@
             // 
             // btn_ModProduct_Cancel
             // 
+            this.btn_ModProduct_Cancel.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.btn_ModProduct_Cancel.Location = new System.Drawing.Point(1508, 870);
             this.btn_ModProduct_Cancel.Name = "btn_ModProduct_Cancel";
             this.btn_ModProduct_Cancel.Size = new System.Drawing.Size(177, 65);
@@ -177,24 +197,27 @@
             // lbl_ModProduct_CandidateParts
             // 
             this.lbl_ModProduct_CandidateParts.AutoSize = true;
-            this.lbl_ModProduct_CandidateParts.Location = new System.Drawing.Point(41, 40);
+            this.lbl_ModProduct_CandidateParts.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lbl_ModProduct_CandidateParts.Location = new System.Drawing.Point(639, 59);
             this.lbl_ModProduct_CandidateParts.Name = "lbl_ModProduct_CandidateParts";
-            this.lbl_ModProduct_CandidateParts.Size = new System.Drawing.Size(190, 25);
+            this.lbl_ModProduct_CandidateParts.Size = new System.Drawing.Size(238, 37);
             this.lbl_ModProduct_CandidateParts.TabIndex = 19;
             this.lbl_ModProduct_CandidateParts.Text = "All candidate parts";
             // 
             // lbl_ModProduct_PartsAssociated
             // 
             this.lbl_ModProduct_PartsAssociated.AutoSize = true;
-            this.lbl_ModProduct_PartsAssociated.Location = new System.Drawing.Point(863, 424);
+            this.lbl_ModProduct_PartsAssociated.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lbl_ModProduct_PartsAssociated.Location = new System.Drawing.Point(639, 441);
             this.lbl_ModProduct_PartsAssociated.Name = "lbl_ModProduct_PartsAssociated";
-            this.lbl_ModProduct_PartsAssociated.Size = new System.Drawing.Size(334, 25);
+            this.lbl_ModProduct_PartsAssociated.Size = new System.Drawing.Size(412, 37);
             this.lbl_ModProduct_PartsAssociated.TabIndex = 20;
             this.lbl_ModProduct_PartsAssociated.Text = "Parts associated with this product";
             // 
             // btn_ModProduct_Delete
             // 
-            this.btn_ModProduct_Delete.Location = new System.Drawing.Point(1508, 731);
+            this.btn_ModProduct_Delete.Font = new System.Drawing.Font("Segoe UI", 7.875F);
+            this.btn_ModProduct_Delete.Location = new System.Drawing.Point(1508, 719);
             this.btn_ModProduct_Delete.Name = "btn_ModProduct_Delete";
             this.btn_ModProduct_Delete.Size = new System.Drawing.Size(177, 65);
             this.btn_ModProduct_Delete.TabIndex = 21;
@@ -224,7 +247,8 @@
             // 
             // btn_ModProduct_Search
             // 
-            this.btn_ModProduct_Search.Location = new System.Drawing.Point(293, 30);
+            this.btn_ModProduct_Search.Font = new System.Drawing.Font("Segoe UI", 7.875F);
+            this.btn_ModProduct_Search.Location = new System.Drawing.Point(8, 21);
             this.btn_ModProduct_Search.Name = "btn_ModProduct_Search";
             this.btn_ModProduct_Search.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_ModProduct_Search.Size = new System.Drawing.Size(108, 45);
@@ -236,7 +260,8 @@
             // txt_ModProduct_Search
             // 
             this.txt_ModProduct_Search.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_ModProduct_Search.Location = new System.Drawing.Point(420, 28);
+            this.txt_ModProduct_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
+            this.txt_ModProduct_Search.Location = new System.Drawing.Point(135, 19);
             this.txt_ModProduct_Search.Multiline = true;
             this.txt_ModProduct_Search.Name = "txt_ModProduct_Search";
             this.txt_ModProduct_Search.Size = new System.Drawing.Size(247, 45);
@@ -246,26 +271,26 @@
             // 
             this.groupBox1.Controls.Add(this.txt_ModProduct_Search);
             this.groupBox1.Controls.Add(this.btn_ModProduct_Search);
-            this.groupBox1.Controls.Add(this.lbl_ModProduct_CandidateParts);
-            this.groupBox1.Location = new System.Drawing.Point(848, 22);
+            this.groupBox1.Location = new System.Drawing.Point(1303, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(723, 79);
+            this.groupBox1.Size = new System.Drawing.Size(408, 79);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             // 
             // lbl_ModProduct_Title
             // 
             this.lbl_ModProduct_Title.AutoSize = true;
-            this.lbl_ModProduct_Title.Font = new System.Drawing.Font("Bahnschrift SemiBold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ModProduct_Title.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.lbl_ModProduct_Title.Location = new System.Drawing.Point(215, 53);
             this.lbl_ModProduct_Title.Name = "lbl_ModProduct_Title";
-            this.lbl_ModProduct_Title.Size = new System.Drawing.Size(241, 48);
+            this.lbl_ModProduct_Title.Size = new System.Drawing.Size(246, 54);
             this.lbl_ModProduct_Title.TabIndex = 27;
             this.lbl_ModProduct_Title.Text = "Add Product";
             // 
             // btn_AddAssociatedProduct_Add
             // 
-            this.btn_AddAssociatedProduct_Add.Location = new System.Drawing.Point(1508, 401);
+            this.btn_AddAssociatedProduct_Add.Font = new System.Drawing.Font("Segoe UI", 7.875F);
+            this.btn_AddAssociatedProduct_Add.Location = new System.Drawing.Point(1508, 378);
             this.btn_AddAssociatedProduct_Add.Name = "btn_AddAssociatedProduct_Add";
             this.btn_AddAssociatedProduct_Add.Size = new System.Drawing.Size(177, 65);
             this.btn_AddAssociatedProduct_Add.TabIndex = 28;
@@ -281,6 +306,7 @@
             this.ClientSize = new System.Drawing.Size(1769, 988);
             this.Controls.Add(this.btn_AddAssociatedProduct_Add);
             this.Controls.Add(this.lbl_ModProduct_Title);
+            this.Controls.Add(this.lbl_ModProduct_CandidateParts);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgv_ModProduct_PartsAssociated);
             this.Controls.Add(this.dgv_ModProduct_CandidateParts);

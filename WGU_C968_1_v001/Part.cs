@@ -39,11 +39,6 @@ namespace WGU_C968_1_v001
 
         private static BindingList<Part> Parts = new BindingList<Part>();
 
-        //public static BindingList<Part> partz
-        //{
-        //    get { return Parts; }
-        //    set { Parts = value; }
-        //}
 
 
     }

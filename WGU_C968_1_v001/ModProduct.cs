@@ -97,14 +97,20 @@ namespace WGU_C968_1_v001
             int id = int.Parse(txt_ModProduct_ID.Text);
 
             Product product = new Product(
-                (Inventory.Products.Count + 1),
+                Int32.Parse(txt_ModProduct_ID.Text),
                 name,
                 InStock,
                 (decimal)price,
                 maxStock,
                 minStock
             );
-          Inventory.UpdateProduct(1, product);
+
+            foreach (Part part in associatedParts)
+            {
+                product.AddAssociatedPart(part);
+            }
+
+            Inventory.UpdateProduct(product.ProdID, product);
 
             this.Close();
 
@@ -164,19 +170,9 @@ namespace WGU_C968_1_v001
             }
             else
             {
-                //associatedParts.AllowRemove = true;
-
-
-
                 Part partToAdd = (Part)dgv_ModProduct_CandidateParts.CurrentRow.DataBoundItem;
                 associatedParts.Add(partToAdd);
                 dgv_ModProduct_PartsAssociated.DataSource = associatedParts;
-                //associatedParts.Remove(partToAdd);
-                //BindingList<Part> tempList = new BindingList<Part>();
-                //int candidatePartRemoval = dgv_ModProduct_CandidateParts.CurrentRow.Index;
-                //dgv_ModProduct_CandidateParts.DataSource = tempList;
-                //associatedParts.RemoveAt(candidatePartRemoval);
-
             }
 
         }
@@ -187,15 +183,18 @@ namespace WGU_C968_1_v001
             {
                 MessageBox.Show("Nothing selected!");
                 return;
-
             }
-            else
+
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this part?", "Confirmation", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
             {
                 Part partToRemove = (Part)dgv_ModProduct_PartsAssociated.CurrentRow.DataBoundItem;
-               // associatedParts.Add(partToAdd);
-               // dgv_ModProduct_PartsAssociated.DataSource = associatedParts;
-               associatedParts.Remove(partToRemove);
+                associatedParts.Remove(partToRemove);
             }
+            else return;
+
+
+         
         }
     }
 }

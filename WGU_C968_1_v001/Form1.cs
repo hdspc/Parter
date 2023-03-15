@@ -130,11 +130,16 @@ int nHeightEllipse // height of ellipse
 
             }
 
-            //Remove part from list
-            Part P = dgv_PartsGrid.CurrentRow.DataBoundItem as Part;
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this part?", "Confirmation", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                //Remove part from list
+                Part P = dgv_PartsGrid.CurrentRow.DataBoundItem as Part;
 
-            Inventory.DeletePart(P);
-            dgv_PartsGrid.DataSource = Inventory.partz;
+                Inventory.DeletePart(P);
+                dgv_PartsGrid.DataSource = Inventory.partz;
+            }
+            else return;
 
         }
 
@@ -249,7 +254,12 @@ int nHeightEllipse // height of ellipse
             DialogResult result = MessageBox.Show("Are you sure you want to delete this product?", "Confirmation", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-
+                Product Prod = (Product)dgv_ProductsGrid.CurrentRow.DataBoundItem;
+                if (Prod.AssociatedParts.Count > 0)
+                {
+                    MessageBox.Show("Cannot delete product with associated parts. Please remove parts attached to this product.");
+                    return;
+                }
                 //Remove part from list
                 int P = dgv_ProductsGrid.CurrentRow.Index;
                 Product prod = (Product)dgv_ProductsGrid.CurrentRow.DataBoundItem;

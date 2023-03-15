@@ -46,11 +46,11 @@ namespace WGU_C968_1_v001
 
         public static Product LookupProduct(int prodID)
         {
-            foreach (Product prod in Products)
+            foreach (Product P in Products)
             {
-                if (prod.ProdID == prodID)
+                if (P.ProdID == prodID)
                 {
-                    return prod;
+                    return P;
                 }
             }
             Product emptyProduct = new WGU_C968_1_v001.Product();
@@ -94,9 +94,7 @@ namespace WGU_C968_1_v001
 
         public static bool DeletePart(Part P)
         {
-         
-
-               partz.Remove(P);
+            partz.Remove(P);
                 return true;
           
         }

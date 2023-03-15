@@ -55,7 +55,7 @@
             this.rdo_ModPart_InHouse.AutoSize = true;
             this.rdo_ModPart_InHouse.Location = new System.Drawing.Point(45, 30);
             this.rdo_ModPart_InHouse.Name = "rdo_ModPart_InHouse";
-            this.rdo_ModPart_InHouse.Size = new System.Drawing.Size(128, 29);
+            this.rdo_ModPart_InHouse.Size = new System.Drawing.Size(127, 34);
             this.rdo_ModPart_InHouse.TabIndex = 0;
             this.rdo_ModPart_InHouse.TabStop = true;
             this.rdo_ModPart_InHouse.Text = "In House";
@@ -67,7 +67,7 @@
             this.rdo_ModPart_Outsourced.AutoSize = true;
             this.rdo_ModPart_Outsourced.Location = new System.Drawing.Point(270, 30);
             this.rdo_ModPart_Outsourced.Name = "rdo_ModPart_Outsourced";
-            this.rdo_ModPart_Outsourced.Size = new System.Drawing.Size(154, 29);
+            this.rdo_ModPart_Outsourced.Size = new System.Drawing.Size(152, 34);
             this.rdo_ModPart_Outsourced.TabIndex = 1;
             this.rdo_ModPart_Outsourced.TabStop = true;
             this.rdo_ModPart_Outsourced.Text = "Outsourced";
@@ -76,6 +76,8 @@
             // 
             // txt_ModPart_ID
             // 
+            this.txt_ModPart_ID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_ModPart_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
             this.txt_ModPart_ID.Location = new System.Drawing.Point(303, 206);
             this.txt_ModPart_ID.Name = "txt_ModPart_ID";
             this.txt_ModPart_ID.Size = new System.Drawing.Size(188, 31);
@@ -84,63 +86,70 @@
             // lbl_ModPart_ID
             // 
             this.lbl_ModPart_ID.AutoSize = true;
+            this.lbl_ModPart_ID.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.lbl_ModPart_ID.Location = new System.Drawing.Point(175, 209);
             this.lbl_ModPart_ID.Name = "lbl_ModPart_ID";
-            this.lbl_ModPart_ID.Size = new System.Drawing.Size(32, 25);
+            this.lbl_ModPart_ID.Size = new System.Drawing.Size(34, 30);
             this.lbl_ModPart_ID.TabIndex = 3;
             this.lbl_ModPart_ID.Text = "ID";
             // 
             // lbl_ModPart_Name
             // 
             this.lbl_ModPart_Name.AutoSize = true;
+            this.lbl_ModPart_Name.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.lbl_ModPart_Name.Location = new System.Drawing.Point(175, 285);
             this.lbl_ModPart_Name.Name = "lbl_ModPart_Name";
-            this.lbl_ModPart_Name.Size = new System.Drawing.Size(68, 25);
+            this.lbl_ModPart_Name.Size = new System.Drawing.Size(69, 30);
             this.lbl_ModPart_Name.TabIndex = 4;
             this.lbl_ModPart_Name.Text = "Name";
             // 
             // lbl_ModPart_Inventory
             // 
             this.lbl_ModPart_Inventory.AutoSize = true;
+            this.lbl_ModPart_Inventory.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.lbl_ModPart_Inventory.Location = new System.Drawing.Point(175, 363);
             this.lbl_ModPart_Inventory.Name = "lbl_ModPart_Inventory";
-            this.lbl_ModPart_Inventory.Size = new System.Drawing.Size(100, 25);
+            this.lbl_ModPart_Inventory.Size = new System.Drawing.Size(100, 30);
             this.lbl_ModPart_Inventory.TabIndex = 5;
             this.lbl_ModPart_Inventory.Text = "Inventory";
             // 
             // lbl_ModPart_Price
             // 
             this.lbl_ModPart_Price.AutoSize = true;
+            this.lbl_ModPart_Price.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.lbl_ModPart_Price.Location = new System.Drawing.Point(175, 441);
             this.lbl_ModPart_Price.Name = "lbl_ModPart_Price";
-            this.lbl_ModPart_Price.Size = new System.Drawing.Size(111, 25);
+            this.lbl_ModPart_Price.Size = new System.Drawing.Size(107, 30);
             this.lbl_ModPart_Price.TabIndex = 6;
             this.lbl_ModPart_Price.Text = "Price/Cost";
             // 
             // lbl_ModPart_Max
             // 
             this.lbl_ModPart_Max.AutoSize = true;
+            this.lbl_ModPart_Max.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.lbl_ModPart_Max.Location = new System.Drawing.Point(175, 537);
             this.lbl_ModPart_Max.Name = "lbl_ModPart_Max";
-            this.lbl_ModPart_Max.Size = new System.Drawing.Size(53, 25);
+            this.lbl_ModPart_Max.Size = new System.Drawing.Size(53, 30);
             this.lbl_ModPart_Max.TabIndex = 7;
             this.lbl_ModPart_Max.Text = "Max";
             // 
             // lbl_ModPart_Min
             // 
             this.lbl_ModPart_Min.AutoSize = true;
+            this.lbl_ModPart_Min.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.lbl_ModPart_Min.Location = new System.Drawing.Point(524, 537);
             this.lbl_ModPart_Min.Name = "lbl_ModPart_Min";
-            this.lbl_ModPart_Min.Size = new System.Drawing.Size(47, 25);
+            this.lbl_ModPart_Min.Size = new System.Drawing.Size(49, 30);
             this.lbl_ModPart_Min.TabIndex = 8;
             this.lbl_ModPart_Min.Text = "Min";
             // 
             // lbl_ModPart_MachineID
             // 
             this.lbl_ModPart_MachineID.AutoSize = true;
+            this.lbl_ModPart_MachineID.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.lbl_ModPart_MachineID.Location = new System.Drawing.Point(53, 632);
             this.lbl_ModPart_MachineID.Name = "lbl_ModPart_MachineID";
-            this.lbl_ModPart_MachineID.Size = new System.Drawing.Size(233, 25);
+            this.lbl_ModPart_MachineID.Size = new System.Drawing.Size(228, 30);
             this.lbl_ModPart_MachineID.TabIndex = 9;
             this.lbl_ModPart_MachineID.Text = "Machine ID/COMPANY";
             // 
@@ -148,6 +157,7 @@
             // 
             this.groupBox1.Controls.Add(this.rdo_ModPart_InHouse);
             this.groupBox1.Controls.Add(this.rdo_ModPart_Outsourced);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.groupBox1.Location = new System.Drawing.Point(122, 55);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(474, 90);
@@ -156,6 +166,8 @@
             // 
             // txt_ModPart_Name
             // 
+            this.txt_ModPart_Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_ModPart_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
             this.txt_ModPart_Name.Location = new System.Drawing.Point(303, 285);
             this.txt_ModPart_Name.Name = "txt_ModPart_Name";
             this.txt_ModPart_Name.Size = new System.Drawing.Size(188, 31);
@@ -163,6 +175,8 @@
             // 
             // txt_ModPart_Inventory
             // 
+            this.txt_ModPart_Inventory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_ModPart_Inventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
             this.txt_ModPart_Inventory.Location = new System.Drawing.Point(303, 363);
             this.txt_ModPart_Inventory.Name = "txt_ModPart_Inventory";
             this.txt_ModPart_Inventory.Size = new System.Drawing.Size(188, 31);
@@ -170,6 +184,8 @@
             // 
             // txt_ModPart_Price
             // 
+            this.txt_ModPart_Price.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_ModPart_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
             this.txt_ModPart_Price.Location = new System.Drawing.Point(303, 435);
             this.txt_ModPart_Price.Name = "txt_ModPart_Price";
             this.txt_ModPart_Price.Size = new System.Drawing.Size(188, 31);
@@ -177,6 +193,8 @@
             // 
             // txt_ModPart_Max
             // 
+            this.txt_ModPart_Max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_ModPart_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
             this.txt_ModPart_Max.Location = new System.Drawing.Point(303, 537);
             this.txt_ModPart_Max.Name = "txt_ModPart_Max";
             this.txt_ModPart_Max.Size = new System.Drawing.Size(188, 31);
@@ -184,6 +202,8 @@
             // 
             // txt_ModPart_Min
             // 
+            this.txt_ModPart_Min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_ModPart_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
             this.txt_ModPart_Min.Location = new System.Drawing.Point(577, 537);
             this.txt_ModPart_Min.Name = "txt_ModPart_Min";
             this.txt_ModPart_Min.Size = new System.Drawing.Size(188, 31);
@@ -191,6 +211,8 @@
             // 
             // txt_ModPart_MachineID
             // 
+            this.txt_ModPart_MachineID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_ModPart_MachineID.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
             this.txt_ModPart_MachineID.Location = new System.Drawing.Point(303, 632);
             this.txt_ModPart_MachineID.Name = "txt_ModPart_MachineID";
             this.txt_ModPart_MachineID.Size = new System.Drawing.Size(188, 31);
@@ -198,6 +220,7 @@
             // 
             // btn_ModPart_Save
             // 
+            this.btn_ModPart_Save.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.btn_ModPart_Save.Location = new System.Drawing.Point(484, 725);
             this.btn_ModPart_Save.Name = "btn_ModPart_Save";
             this.btn_ModPart_Save.Size = new System.Drawing.Size(177, 65);
@@ -208,6 +231,7 @@
             // 
             // btn_ModPart_Cancel
             // 
+            this.btn_ModPart_Cancel.Font = new System.Drawing.Font("Segoe UI", 7.875F);
             this.btn_ModPart_Cancel.Location = new System.Drawing.Point(694, 725);
             this.btn_ModPart_Cancel.Name = "btn_ModPart_Cancel";
             this.btn_ModPart_Cancel.Size = new System.Drawing.Size(177, 65);

@@ -86,6 +86,11 @@ namespace WGU_C968_1_v001
                 minStock
             );
 
+            foreach (Part part in associatedParts)
+            {
+                product.AddAssociatedPart(part);
+            }
+
             Inventory.AddProduct(product);
             this.Close();
 

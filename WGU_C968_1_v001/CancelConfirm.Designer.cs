@@ -45,17 +45,17 @@
             // lbl_CancelConfirm_BodyText
             // 
             this.lbl_CancelConfirm_BodyText.AutoSize = true;
-            this.lbl_CancelConfirm_BodyText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_CancelConfirm_BodyText.Location = new System.Drawing.Point(100, 126);
+            this.lbl_CancelConfirm_BodyText.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.lbl_CancelConfirm_BodyText.Location = new System.Drawing.Point(117, 127);
             this.lbl_CancelConfirm_BodyText.Name = "lbl_CancelConfirm_BodyText";
-            this.lbl_CancelConfirm_BodyText.Size = new System.Drawing.Size(607, 102);
+            this.lbl_CancelConfirm_BodyText.Size = new System.Drawing.Size(567, 108);
             this.lbl_CancelConfirm_BodyText.TabIndex = 1;
             this.lbl_CancelConfirm_BodyText.Text = "Are you sure you\'d like to exit?\r\nYour changes won\'t be saved. ";
             this.lbl_CancelConfirm_BodyText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_CancelConfirm_Exit
             // 
-            this.btn_CancelConfirm_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.875F);
+            this.btn_CancelConfirm_Exit.Font = new System.Drawing.Font("Segoe UI", 12.875F);
             this.btn_CancelConfirm_Exit.Location = new System.Drawing.Point(160, 329);
             this.btn_CancelConfirm_Exit.Name = "btn_CancelConfirm_Exit";
             this.btn_CancelConfirm_Exit.Size = new System.Drawing.Size(144, 64);
@@ -66,7 +66,7 @@
             // 
             // btn_CancelConfirm_Cancel
             // 
-            this.btn_CancelConfirm_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.875F);
+            this.btn_CancelConfirm_Cancel.Font = new System.Drawing.Font("Segoe UI", 12.875F);
             this.btn_CancelConfirm_Cancel.Location = new System.Drawing.Point(487, 329);
             this.btn_CancelConfirm_Cancel.Name = "btn_CancelConfirm_Cancel";
             this.btn_CancelConfirm_Cancel.Size = new System.Drawing.Size(160, 64);
